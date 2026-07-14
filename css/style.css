@@ -1,0 +1,834 @@
+/* ===========================
+   NATHY UNIVERSE
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height:100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #100d1b;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+
+    width: 75%;
+    max-width: 1600px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* Voile discret */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    backdrop-filter: blur(18px);
+    background: rgba(0,0,0,0.25);
+
+    pointer-events: none;
+}
+
+/* Bloc texte */
+
+.hero-content {
+
+    position: absolute;
+
+    top: 34%;
+    right: 8%;
+
+    transform: translateY(-50%);
+
+    width: 38%;
+
+    text-align: left;
+
+    z-index: 2;
+
+}
+
+.hero h1 {
+
+    font-size: clamp(3rem, 5vw, 5rem);
+
+    font-weight: 300;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 22px;
+
+    color: #f6f3ec;
+
+}
+
+.hero p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.92);
+
+    margin-bottom: 25px;
+    padding-left: 50px;
+
+}
+
+/* Bouton */
+
+.btn-decouvrir {
+
+    display: inline-block;
+
+    margin-left: 195px;
+
+    margin-top: 22px;
+
+    padding: 15px 42px;
+
+    border: 2px solid rgba(218,214,232,0.82);
+
+    border-radius: 40px;
+
+    color: rgb(245,245,248);
+
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.03);
+
+    transition: all .35s ease;
+
+    letter-spacing: 1px;
+
+}
+
+.btn-decouvrir:hover {
+
+    background: rgba(255,255,255,0.12);
+
+    border-color: rgba(220,215,235,0.95);
+
+    color: white;
+
+    box-shadow: 0 0 18px rgba(205,190,235,0.28);
+
+    transform: translateY(-2px);
+
+}
+
+/* ===========================
+   PRÉSENTATION
+=========================== */
+
+.presentation {
+
+    background: #101010;
+
+    padding: 130px 10%;
+
+}
+
+.container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+.presentation h2 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+
+}
+
+.presentation p {
+
+    text-align: center;
+
+    color: #d5d5d5;
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+}
+
+/* ===========================
+   CATÉGORIES
+=========================== */
+
+.categories {
+
+    background: #181818;
+
+    padding: 130px 10%;
+
+    min-height: 700px;
+
+}
+
+.categories h2 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+}
+
+/* ==========================================
+   LUCIOLES
+========================================== */
+
+.fireflies {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+
+    background: #ffe89a;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px #ffe89a,
+        0 0 18px rgba(255, 232, 154, 0.8);
+
+    opacity: 0;
+
+    animation: floatFirefly 18s ease-in-out infinite,
+               glowFirefly 4s ease-in-out infinite;
+}
+
+/* Position de chaque luciole */
+
+.firefly:nth-child(1) {
+    left: 12%;
+    top: 72%;
+    animation-delay: 0s;
+}
+
+.firefly:nth-child(2) {
+    left: 24%;
+    top: 48%;
+    animation-delay: 3s;
+}
+
+.firefly:nth-child(3) {
+    left: 37%;
+    top: 68%;
+    animation-delay: 6s;
+}
+
+.firefly:nth-child(4) {
+    left: 63%;
+    top: 38%;
+    animation-delay: 2s;
+}
+
+.firefly:nth-child(5) {
+    left: 77%;
+    top: 62%;
+    animation-delay: 8s;
+}
+
+.firefly:nth-child(6) {
+    left: 90%;
+    top: 44%;
+    animation-delay: 5s;
+}
+
+/* Déplacement très lent */
+
+@keyframes floatFirefly {
+
+    0% {
+        transform: translate(0,0);
+    }
+
+    25% {
+        transform: translate(-10px,-18px);
+    }
+
+    50% {
+        transform: translate(8px,-35px);
+    }
+
+    75% {
+        transform: translate(-6px,-18px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+
+}
+
+/* Scintillement */
+
+@keyframes glowFirefly {
+
+    0%,
+    100% {
+        opacity: .15;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scale(1.15);
+    }
+
+}
+
+/* ==========================================
+   FORÊT VIVANTE
+========================================== */
+
+#foret-vivante {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Luciole de base */
+
+.firefly {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+
+    animation: scintillement 4s ease-in-out infinite;
+}
+
+/* Dorée */
+
+.firefly.gold {
+    background: #ffd76b;
+
+    box-shadow:
+        0 0 6px #ffd76b,
+        0 0 14px rgba(255,215,107,.8);
+}
+
+/* Argentée */
+
+.firefly.silver {
+    background: #f2f2f2;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 12px rgba(255,255,255,.7);
+}
+
+/* Bleu lunaire */
+
+.firefly.blue {
+    background: #b8d9ff;
+
+    box-shadow:
+        0 0 6px #b8d9ff,
+        0 0 14px rgba(184,217,255,.75);
+}
+
+/* Animation de scintillement */
+
+@keyframes scintillement {
+
+    0% {
+        opacity: .15;
+        transform: translate(-50%, -50%) scale(.85);
+    }
+
+    50% {
+        opacity: .95;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        opacity: .15;
+        transform: translate(-50%, -50%) scale(.85);
+    }
+
+}
+
+/* ==========================================
+   EMBLÈME
+========================================== */
+
+/* ==========================================
+   EMBLÈME
+========================================== */
+
+.site-emblem {
+
+    position: absolute;
+
+    top: 25px;
+
+    left: 20px;
+
+    z-index: 20;
+
+    width: 100px;
+    height: 100px;
+
+}
+
+/* Logo */
+
+.site-emblem img {
+
+    position: relative;
+
+    width: 100px;
+
+    height: auto;
+
+    display: block;
+
+    opacity: .95;
+
+    z-index: 1;
+
+}
+
+.site-emblem img {
+
+    width: 95px;
+
+    height: auto;
+
+    opacity: .92;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 6px rgba(190, 175, 255, 0.22))
+        drop-shadow(0 0 18px rgba(165, 125, 255, 0.12));
+
+    animation: moonGlow 10s ease-in-out infinite;
+
+}
+
+@keyframes moonGlow {
+
+    0% {
+
+        filter:
+            drop-shadow(0 0 5px rgba(190, 175, 255, 0.18))
+            drop-shadow(0 0 14px rgba(165, 125, 255, 0.08));
+
+    }
+
+    50% {
+
+        filter:
+            drop-shadow(0 0 8px rgba(190, 175, 255, 0.28))
+            drop-shadow(0 0 22px rgba(165, 125, 255, 0.16));
+
+    }
+
+    100% {
+
+        filter:
+            drop-shadow(0 0 5px rgba(190, 175, 255, 0.18))
+            drop-shadow(0 0 14px rgba(165, 125, 255, 0.08));
+
+    }
+
+}
+
+/* ==========================================================
+   SECTION EXPLORER
+========================================================== */
+
+.explorer {
+    padding: 120px 8%;
+    background: linear-gradient(to bottom, #23232b, #18181f);
+    text-align: center;
+}
+
+.explorer-contenu {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.explorer h2 {
+    font-size: 2.8rem;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.explorer-intro {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #cfcfd8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ==========================================================
+   CARTE EXPLORER
+========================================================== */
+
+.cartes-explorer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.carte-explorer {
+    width: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-explorer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(185, 160, 255, 0.25);
+}
+
+.carte-image {
+    height: 220px;
+    background: linear-gradient(135deg, #2b2b38, #1a1a22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carte-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.carte-contenu {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.carte-contenu h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.carte-contenu p {
+    color: #cfcfd8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-carte {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: 0.3s;
+}
+
+.btn-carte:hover {
+    background: rgba(185,160,255,0.18);
+    border-color: rgba(185,160,255,0.45);
+}
+
+/* ==========================
+   GALERIE DES CRÉATIONS
+========================== */
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.creation {
+    width: 320px;
+    text-align: center;
+}
+
+.creation img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.portrait {
+    object-position: center 20%;
+}
+
+.creation img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(185, 160, 255, 0.28);
+}
+
+.creation h3 {
+    margin-top: 15px;
+}
+
+.retour-accueil {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.btn-retour {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-retour:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+}
+
+.image-complete {
+    object-fit: contain !important;
+    background: transparent;
+}
+
+/* ==========================
+   LIGHTBOX
+========================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.35s ease;
+
+    z-index: 9999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 18px;
+
+    transform: scale(0.92);
+    transition: transform 0.35s ease;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+.fermer-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    font-size: 42px;
+    color: silver;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.fermer-lightbox:hover {
+    color: white;
+}
+
+/* ==========================
+   FLÈCHES LIGHTBOX
+========================== */
+
+.fleche-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 34px;
+    font-weight: 300;
+
+    color: rgba(230, 230, 235, 0.38);
+
+    cursor: pointer;
+    user-select: none;
+
+    opacity: .45;
+
+    transition:
+        opacity .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.fleche-gauche {
+    left: 24px;
+}
+
+.fleche-droite {
+    right: 24px;
+}
+
+.fleche-lightbox:hover {
+    opacity: .95;
+    color: rgb(245,245,248);
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* ==========================
+   SIGNATURE LIGHTBOX
+========================== */
+
+.signature-lightbox {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    width: 90px;
+    height: auto;
+
+    opacity: 0.15;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-content {
+
+        width: 30%;
+
+        top: 50%;
+        right: 15%;
+
+        transform: translateY(-50%);
+        text-align: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2rem;
+       
+    }
+
+    .hero p {
+
+        font-size: 0.9rem;
+        line-height: 1.5;
+    
+        padding-left: 0;
+
+    }
+
+    .btn-decouvrir {
+
+    display: inline-block;
+    margin-left: 0;
+
+    margin-top: 20px;
+
+    padding: 10px 22px;
+
+    font-size: 0.9rem;
+
+}
+
+}
