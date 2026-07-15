@@ -924,3 +924,89 @@ body {
     z-index: 2;
 }
 
+/* ==========================================================
+   VERSION SMARTPHONE
+========================================================== */
+
+@media screen and (max-width: 768px) {
+
+ .hero {
+    min-height: auto;
+    padding: 50px 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-content {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    transform: none;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    padding-left: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.btn-decouvrir {
+    margin: 25px auto 0;
+    display: inline-block;
+}
+
+/* ===========================
+   VERSION SMARTPHONE
+=========================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 40px 20px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        margin: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .hero-text .btn {
+        margin-top: 20px;
+        width: 220px;
+        font-size: 1.1rem;
+    }
+
+}
+
+}
