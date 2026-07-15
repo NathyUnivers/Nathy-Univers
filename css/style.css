@@ -931,7 +931,7 @@ body {
 @media screen and (max-width: 768px) {
 
  .hero {
-    min-height: auto;
+    min-height: 100vh;;
     padding: 50px 20px;
 }
 
