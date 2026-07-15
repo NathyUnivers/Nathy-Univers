@@ -891,6 +891,73 @@ body {
     z-index: 2;
 }
 
+/* ==========================================================
+   RESPONSIVE - CARTES EXPLORER
+========================================================== */
+
+@media screen and (max-width:768px) {
+
+    /* Rapproche les sections */
+    .presentation {
+        padding: 70px 8% 50px;
+    }
+
+    .explorer {
+        padding: 60px 6% 70px;
+    }
+
+    .explorer h2 {
+        margin-bottom: 15px;
+    }
+
+    .explorer-intro {
+        margin-bottom: 35px;
+    }
+
+    /* Cartes */
+    .cartes-explorer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .carte-explorer {
+        width: 100%;
+    }
+
+    .carte-image {
+        height: 170px;
+    }
+
+    .carte-contenu {
+        padding: 18px;
+    }
+
+    .carte-contenu h3 {
+        font-size: 1.1rem;
+    }
+
+    .carte-contenu p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .btn-carte {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Très petits téléphones */
+
+@media screen and (max-width:480px) {
+
+    .cartes-explorer {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 
 
 
