@@ -164,8 +164,15 @@
 <script src="js/script.js"></script>
 <script src="js/aurores.js"></script>
 
-<script data-goatcounter="https://nathy-universe.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+<script>
+if (!window.location.search.includes("test")) {
+    const script = document.createElement("script");
+    script.dataset.goatcounter = "https://nathy-universe.goatcounter.com/count";
+    script.async = true;
+    script.src = "//gc.zgo.at/count.js";
+    document.body.appendChild(script);
+}
+</script>
 
 </body>
 
