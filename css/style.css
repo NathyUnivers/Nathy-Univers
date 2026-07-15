@@ -971,42 +971,5 @@ body {
     display: inline-block;
 }
 
-/* ===========================
-   VERSION SMARTPHONE
-=========================== */
-
-@media (max-width: 768px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-        padding: 40px 20px;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 340px;
-        height: auto;
-        margin: auto;
-    }
-
-    .hero-text h1 {
-        font-size: 2.8rem;
-        line-height: 1.1;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-    }
-
-    .hero-text .btn {
-        margin-top: 20px;
-        width: 220px;
-        font-size: 1.1rem;
-    }
-
 }
 
-}
