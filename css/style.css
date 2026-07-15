@@ -971,5 +971,16 @@ body {
     display: inline-block;
 }
 
+.site-emblem {
+    top: 15px;
+    left: 15px;
+    width: 75px;
+    height: 75px;
+}
+
+.site-emblem img {
+    width: 75px;
+}
+
 }
 
