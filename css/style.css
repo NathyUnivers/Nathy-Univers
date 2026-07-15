@@ -156,78 +156,83 @@ body {
 @media screen and (max-width:768px){
 
     .hero{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
+        min-height:auto;
+        padding:20px 20px 25px;
 
-    min-height:auto;
-    padding:20px 20px 30px;
-    gap:20px;
-}
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
 
-.site-emblem{
-    position:relative;
-    top:auto;
-    left:auto;
-    width:90px;
-    height:auto;
-    margin:0 auto 10px;
-}
+        overflow:visible;
+    }
 
-.site-emblem img{
-    width:90px;
-    height:auto;
-}
+    .site-emblem{
+        position:static;
 
-.hero-image{
-    width:100%;
-    max-width:380px;
-    margin:0 auto;
-    display:block;
-}
+        width:90px;
+        height:auto;
 
-.hero-content{
-    position:relative;
-    top:auto;
-    right:auto;
-    transform:none;
+        margin:0 auto 20px;
+    }
 
-    width:100%;
-    max-width:380px;
+    .site-emblem img{
+        width:90px;
+        display:block;
+        margin:auto;
+    }
 
-    text-align:center;
-    margin:0 auto;
-}
+    .hero-image{
+        width:100%;
+        max-width:420px;
+        height:auto;
 
-.hero h1{
-    font-size:2.4rem;
-    margin-bottom:15px;
-}
+        margin:0 auto 25px;
 
-.hero p{
-    padding:0;
-    margin-bottom:25px;
-    font-size:1.15rem;
-    line-height:1.6;
-}
+        display:block;
+    }
 
-.btn-decouvrir{
-    display:inline-block;
-    margin:0 auto;
-}
+    .overlay{
+        display:none;
+    }
 
-}
+    #foret-vivante{
+        display:none;
+    }
 
-.site-emblem{
-    top:18px;
-    left:18px;
-    width:76px;
-    height:76px;
-}
+    .hero-content{
 
-.site-emblem img{
-    width:76px;
+        position:static;
+
+        width:100%;
+        max-width:380px;
+
+        margin:0 auto;
+
+        text-align:center;
+
+        transform:none;
+    }
+
+    .hero h1{
+        font-size:2.3rem;
+        margin-bottom:18px;
+        letter-spacing:2px;
+    }
+
+    .hero p{
+        padding:0;
+        margin:0 0 25px;
+        font-size:1.05rem;
+        line-height:1.7;
+    }
+
+    .btn-decouvrir{
+        display:inline-block;
+        margin:0;
+        padding:12px 28px;
+    }
+
 }
 
 /* ===========================
