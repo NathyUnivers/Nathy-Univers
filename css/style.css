@@ -155,31 +155,49 @@ body {
 
 @media screen and (max-width:768px){
 
-.hero{
-    flex-direction:column;
-    justify-content:center;
-    min-height:100vh;
-    padding:95px 20px 40px;
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.hero-image{
-    width:100%;
-    max-width:100%;
+.hero-image {
+
+    width: 100%;
+    max-width: 100%;
+
+    display: block;
+    margin: 0 auto;
+
 }
 
-.hero-content{
+.hero-content {
+
     position: absolute;
-    top: 50%;
+
+    top: 58%;
     left: 50%;
     right: auto;
 
     transform: translate(-50%, -50%);
 
-    width: 80%;
-    max-width: 320px;
+    width: 82%;
+    max-width: 340px;
+
+    margin: 0;
 
     text-align: center;
-    margin: 0;
+
+    z-index: 3;
+
 }
 
 .hero h1{
