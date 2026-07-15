@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!foret) return;
 
+    const smartphone = window.innerWidth <= 768;
+
     /* ---------- Positions disponibles ---------- */
 
-    const positionsForet = [
+    const positionsForetPC = [
 
         { x: 14, y: 72 },
         { x: 22, y: 60 },
@@ -26,6 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
         { x: 89, y: 42 }
 
     ];
+
+    const positionsForetMobile = [
+
+    { x: 12, y: 10 },
+    { x: 25, y: 18 },
+    { x: 42, y: 12 },
+    { x: 60, y: 22 },
+    { x: 82, y: 16 },
+
+    { x: 18, y: 36 },
+    { x: 40, y: 42 },
+    { x: 65, y: 38 },
+
+    { x: 22, y: 58 },
+    { x: 55, y: 60 },
+    { x: 84, y: 54 }
+
+];
 
     const margeGauche = [
 
@@ -45,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { x: 90, y: 36 }
 
     ];
+
+    const positionsForet = smartphone ? positionsForetMobile : positionsForetPC;
 
     console.log("🌿 Forêt Vivante initialisée");
 
