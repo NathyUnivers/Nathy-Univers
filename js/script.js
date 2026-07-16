@@ -162,7 +162,13 @@ async function afficherLikes() {
         }
 
         zoneLikes.querySelector(".likes-count").textContent = data.likes;
+        
      bouton.addEventListener("click", async () => {
+        const cleVote = `like-${slug}`;
+
+if (localStorage.getItem(cleVote)) {
+    return;
+}
 
     const nouveauScore = data.likes + 1;
 
@@ -177,6 +183,7 @@ async function afficherLikes() {
     }
 
     data.likes = nouveauScore;
+    localStorage.setItem(cleVote, "true");
     zoneLikes.querySelector(".likes-count").textContent = nouveauScore;
 
 });
