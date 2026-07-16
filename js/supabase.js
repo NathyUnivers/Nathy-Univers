@@ -7,4 +7,14 @@ const supabase = window.supabase.createClient(
     SUPABASE_ANON_KEY
 );
 
-console.log("Supabase connecté :", supabase);
+async function testConnexion() {
+    const { data, error } = await supabase
+        .from("Créations")
+        .select("*")
+        .eq("slug", "dragon-fusion");
+
+    console.log("Résultat :", data);
+    console.log("Erreur :", error);
+}
+
+testConnexion();
