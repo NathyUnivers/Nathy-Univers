@@ -1006,7 +1006,7 @@ body {
 }
 
 .btn-like:hover {
-    color: #06f5f5;
+    color: hsl(182, 95%, 49%);
     transform: scale(1.18);
     text-shadow:
         0 0 8px #4FE3E3,
@@ -1015,6 +1015,35 @@ body {
 
 .likes-count {
     font-weight: 600;
+}
+
+/* ---------- Bouton Coup de cœur ---------- */
+
+.btn-like {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icone-coeur {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition:
+        transform 0.22s ease,
+        filter 0.25s ease;
+}
+
+.btn-like:hover .icone-coeur {
+    transform: scale(1.15);
+    filter:
+        drop-shadow(0 0 6px #00E5FF)
+        drop-shadow(0 0 12px rgba(170, 120, 255, 0.45));
+}
+
+.btn-like:active .icone-coeur {
+    transform: scale(1.28);
 }
 
 
