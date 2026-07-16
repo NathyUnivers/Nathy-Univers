@@ -148,6 +148,7 @@ async function afficherLikes() {
         if (!slug) continue;
 
         const zoneLikes = creation.querySelector(".likes-container");
+        const bouton = zoneLikes.querySelector(".btn-like");
 
         const { data, error } = await db
             .from("Créations")
@@ -161,6 +162,9 @@ async function afficherLikes() {
         }
 
         zoneLikes.querySelector(".likes-count").textContent = data.likes;
+        bouton.addEventListener("click", () => {
+    console.log("❤️ Clic sur :", slug);
+});
     }
 }
 
