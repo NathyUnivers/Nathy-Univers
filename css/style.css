@@ -985,6 +985,30 @@ body {
 
 }
 
+.likes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-like {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-like:hover {
+    transform: scale(1.15);
+}
+
+.likes-count {
+    font-weight: 600;
+}
+
 
 
 
