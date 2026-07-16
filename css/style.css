@@ -996,13 +996,21 @@ body {
 .btn-like {
     background: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    color: #ffffff;
+    transition:
+        color 0.25s ease,
+        transform 0.2s ease,
+        text-shadow 0.25s ease;
 }
 
 .btn-like:hover {
-    transform: scale(1.15);
+    color: #4FE3E3;
+    transform: scale(1.18);
+    text-shadow:
+        0 0 6px #4FE3E3,
+        0 0 12px rgba(168, 85, 247, 0.45);
 }
 
 .likes-count {
