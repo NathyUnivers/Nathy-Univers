@@ -162,10 +162,25 @@ async function afficherLikes() {
         }
 
         zoneLikes.querySelector(".likes-count").textContent = data.likes;
-        bouton.addEventListener("click", () => {
-    console.log("❤️ Clic sur :", slug);
-});
+     bouton.addEventListener("click", async () => {
+
+    const nouveauScore = data.likes + 1;
+
+    const { error } = await db
+        .from("Créations")
+        .update({ likes: nouveauScore })
+        .eq("slug", slug);
+
+    if (error) {
+        console.error(error);
+        return;
     }
-}
+
+    data.likes = nouveauScore;
+    zoneLikes.querySelector(".likes-count").textContent = nouveauScore;
+
+});
+};
+    }
 
 afficherLikes();
