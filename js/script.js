@@ -160,7 +160,7 @@ async function afficherLikes() {
             continue;
         }
 
-        zoneLikes.innerHTML = `❤️ ${data.likes}`;
+        zoneLikes.querySelector(".likes-count").textContent = data.likes;
     }
 }
 
