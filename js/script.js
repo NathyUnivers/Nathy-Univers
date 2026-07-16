@@ -136,3 +136,26 @@ document.querySelectorAll(".carte-explorer").forEach((carte) => {
     });
 
 });
+
+async function afficherLikes() {
+    const creation = document.querySelector('.creation[data-slug="dragon-fusion"]');
+
+    if (!creation) return;
+
+    const zoneLikes = creation.querySelector(".likes-container");
+
+    const { data, error } = await db
+        .from("Créations")
+        .select("likes")
+        .eq("slug", "dragon-fusion")
+        .single();
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    zoneLikes.innerHTML = `❤️ ${data.likes}`;
+}
+
+afficherLikes();
