@@ -11,7 +11,7 @@ if (lightbox) {
     const flecheGauche = document.querySelector(".fleche-gauche");
     const flecheDroite = document.querySelector(".fleche-droite");
 
-    const images = document.querySelectorAll(".creation img");
+    const images = document.querySelectorAll(".creation .miniature");
 
     let imageCourante = 0;
 
@@ -162,7 +162,7 @@ async function afficherLikes() {
         }
 
         zoneLikes.querySelector(".likes-count").textContent = data.likes;
-        
+
      bouton.addEventListener("click", async () => {
         const cleVote = `like-${slug}`;
 
