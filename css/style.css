@@ -1005,12 +1005,9 @@ body {
         text-shadow 0.25s ease;
 }
 
-.btn-like:hover {
-    color: hsl(182, 95%, 49%);
-    transform: scale(1.08);
-    text-shadow:
-        0 0 8px #4FE3E3,
-        0 0 12px rgba(168, 85, 247, 0.45);
+.btn-like:hover .icone-coeur {
+    transform: scale(1.12);
+    transition: transform 0.18s ease;
 }
 
 .likes-count {
@@ -1038,6 +1035,7 @@ body {
     height: 24px;
     display: block;
     object-fit: contain;
+    transition: transform 0.18s ease;
 }
 
 
