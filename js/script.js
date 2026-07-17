@@ -164,7 +164,12 @@ async function afficherLikes() {
 
         zoneLikes.querySelector(".likes-count").textContent = data.likes;
 
-     bouton.addEventListener("click", async () => {
+        console.log("Listener ajouté pour :", slug);
+
+        bouton.addEventListener("click", async () => {
+
+         console.log("Clic sur :", slug);
+
         const cleVote = `like-${slug}`;
 
 if (localStorage.getItem(cleVote)) {
