@@ -1006,7 +1006,7 @@ body {
 }
 
 .btn-like:hover .icone-coeur {
-    transform: scale(1.50);
+    transform: scale(1.60);
     transition: transform 0.18s ease;
 }
 
