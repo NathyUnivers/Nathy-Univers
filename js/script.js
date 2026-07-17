@@ -137,9 +137,9 @@ document.querySelectorAll(".carte-explorer").forEach((carte) => {
 
 });
 
-async function afficherLikes() {
+    async function afficherLikes() {
 
-    const creations = document.querySelectorAll(".creation");
+       const creations = document.querySelectorAll(".creation");
 
     for (const creation of creations) {
 
