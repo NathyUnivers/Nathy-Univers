@@ -149,6 +149,7 @@ async function afficherLikes() {
 
         const zoneLikes = creation.querySelector(".likes-container");
         const bouton = zoneLikes.querySelector(".btn-like");
+        const coeur = bouton.querySelector(".icone-coeur");
 
         const { data, error } = await db
             .from("Créations")
@@ -184,7 +185,11 @@ if (localStorage.getItem(cleVote)) {
 
     data.likes = nouveauScore;
     localStorage.setItem(cleVote, "true");
-    zoneLikes.querySelector(".likes-count").textContent = nouveauScore;
+    zoneLikes.querySelector(".likes-count").textContent = nouveauScore; 
+
+    coeur.classList.remove("pop");
+    void coeur.offsetWidth;
+    coeur.classList.add("pop");
 
 });
 };
