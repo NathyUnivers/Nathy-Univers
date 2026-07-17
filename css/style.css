@@ -1016,6 +1016,24 @@ body {
 
 /* ---------- Bouton Coup de cœur ---------- */
 
+@keyframes popLike {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.35);
+    }
+
+    65% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .btn-like {
     width: 24px;
     height: 24px;
@@ -1036,6 +1054,10 @@ body {
     display: block;
     object-fit: contain;
     transition: transform 0.18s ease;
+}
+
+.icone-coeur.pop {
+    animation: popLike 0.28s ease;
 }
 
 
