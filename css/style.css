@@ -1007,7 +1007,7 @@ body {
 
 .btn-like:hover {
     color: hsl(182, 95%, 49%);
-    transform: scale(1.05);
+    transform: scale(1.08);
     text-shadow:
         0 0 8px #4FE3E3,
         0 0 12px rgba(168, 85, 247, 0.45);
