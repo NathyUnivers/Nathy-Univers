@@ -693,7 +693,7 @@ body {
     object-position: center 20%;
 }
 
-.creation img:hover {
+.creation .miniature:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 25px rgba(185, 160, 255, 0.28);
 }
