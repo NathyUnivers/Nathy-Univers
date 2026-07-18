@@ -212,12 +212,14 @@ body {
     text-align:center;
 }
 
-    .hero h1{
-        font-size:2rem;
-        line-height:1.15;
-        letter-spacing:1px;
-        margin:0 0 16px;
-    }
+   .hero h1{
+    font-size:2rem;
+    line-height:1.15;
+    letter-spacing:1px;
+
+    margin-top:25px;
+    margin-bottom:16px;
+}
 
     .hero p{
         margin:0;
