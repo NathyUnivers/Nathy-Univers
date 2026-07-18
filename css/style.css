@@ -239,6 +239,48 @@ body {
 
 }
 
+/* ==========================
+   HERO MOBILE DÉDIÉ
+========================== */
+
+.hero-content{
+    display: none;
+}
+
+.hero-mobile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 30px auto 0;
+
+    text-align: center;
+}
+
+.hero-mobile-content h1{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.hero-mobile-content p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+.hero-mobile-content .btn-decouvrir{
+    margin: 0;
+}
+
+
 /* ===========================
    PRÉSENTATION
 =========================== */
