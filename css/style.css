@@ -197,16 +197,20 @@ body {
     }
 
     .hero-content{
-        position:static;
+    position:static;
 
-        width:100%;
-        max-width:360px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-        margin-top:22px;
+    width:100%;
+    max-width:360px;
 
-        transform:none;
-        text-align:center;
-    }
+    margin:35px auto 0;
+
+    transform:none;
+    text-align:center;
+}
 
     .hero h1{
         font-size:2rem;
