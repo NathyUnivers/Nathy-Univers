@@ -176,14 +176,10 @@ if (smartphone && image) {
 
             } else {
 
-                creerLuciole(position, "silver", "marge");
+                creerLuciole(position, "silver", "marge")
 
             }
+             });
 
-        });
-
-    });
-        
-    
- 
-
+     };  
+    })
