@@ -1023,7 +1023,11 @@ body {
     .btn-carte {
         width: 100%;
         text-align: center;
+
+    .creation .miniature {
+        height: 360px;  
     }
+}
 }
 
 /* Très petits téléphones */
