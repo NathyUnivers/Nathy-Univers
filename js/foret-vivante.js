@@ -114,6 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
+    if (!smartphone) {
+
     margeGauche
         .sort(() => Math.random() - 0.5)
         .slice(0, 2)
@@ -121,7 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             creerLuciole(
                 position,
-                index === 0 ? "silver" : "blue", "marge"
+                index === 0 ? "silver" : "blue",
+                "marge"
             );
 
         });
@@ -142,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         });
+
     });
         
     
