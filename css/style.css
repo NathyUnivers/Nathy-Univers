@@ -180,13 +180,13 @@ body {
         margin:auto;
     }
 
-    .hero-image{
-        width:100%;
-        max-width:620px;
-        height:auto;
-        display:block;
-        margin:0 auto;
-    }
+   .hero-image{
+    width:100%;
+    max-width:620px;
+    height:auto;
+    display:block;
+    margin:0 auto 30px;
+}
 
     .overlay{
         display:none;
