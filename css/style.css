@@ -195,18 +195,17 @@ body {
     }
 
     .hero-content{
+    position:static;
 
-        position:static;
+    width:100%;
+    max-width:360px;
 
-        width:100%;
-        max-width:380px;
+    margin-top:18px;
 
-        margin:0 auto;
+    text-align:center;
 
-        text-align:center;
-
-        transform:none;
-    }
+    transform:none;
+}
 
     .hero h1{
     font-size:1.8rem;
