@@ -150,32 +150,28 @@ body {
 }
 
 /* ==========================================================
-   VERSION SMARTPHONE
+   HERO - VERSION SMARTPHONE
 ========================================================== */
 
 @media screen and (max-width:768px){
 
     .hero{
-    min-height:auto;
-    padding:30px 20px 50px;
+        min-height:auto;
+        padding:35px 20px 60px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items:center;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
 
-    gap:20px;
-
-    overflow:visible;
-}
+        overflow:visible;
+    }
 
     .site-emblem{
         position:static;
-
         width:90px;
         height:auto;
-
-        margin:0 auto 20px;
+        margin:0 auto 25px;
     }
 
     .site-emblem img{
@@ -186,49 +182,53 @@ body {
 
     .hero-image{
         width:100%;
-        max-width:420px;
+        max-width:620px;
         height:auto;
-
-        margin:0 auto 25px;
-
         display:block;
+        margin:0 auto;
     }
 
-    .hero-image{
-    margin-bottom:0;
-}
+    .overlay{
+        display:none;
+    }
+
+    #foret-vivante{
+        display:none;
+    }
 
     .hero-content{
-    position:static;
+        position:static;
 
-    width:100%;
-    max-width:360px;
+        width:100%;
+        max-width:360px;
 
-    margin-top:18px;
+        margin-top:22px;
 
-    text-align:center;
-
-    transform:none;
-}
+        transform:none;
+        text-align:center;
+    }
 
     .hero h1{
-    font-size:1.8rem;
-    line-height:1.15;
-    margin-bottom:12px;
-    letter-spacing:1px;
-}
+        font-size:2rem;
+        line-height:1.15;
+        letter-spacing:1px;
+        margin:0 0 16px;
+    }
 
     .hero p{
+        margin:0;
         padding:0;
-        margin:0 0 25px;
+
         font-size:1.05rem;
-        line-height:1.7;
+        line-height:1.6;
     }
 
     .btn-decouvrir{
         display:inline-block;
-        margin:0;
-        padding:12px 28px;
+        margin-top:28px;
+        margin-left:0;
+
+        padding:14px 34px;
     }
 
 }
