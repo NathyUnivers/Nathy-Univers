@@ -194,6 +194,10 @@ body {
         display:block;
     }
 
+    .hero-image{
+    margin-bottom:0;
+}
+
     .hero-content{
     position:static;
 
