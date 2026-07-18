@@ -105,6 +105,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ---------- Création des lucioles ---------- */
 
+const image = document.querySelector(".hero-image");
+
+if (smartphone && image) {
+
+    const rect = image.getBoundingClientRect();
+    const hero = foret.getBoundingClientRect();
+
+    // 14 lucioles réparties dans l'image
+    for (let i = 0; i < 14; i++) {
+
+        const luciole = document.createElement("div");
+
+        const couleurs = ["gold", "gold", "gold", "silver", "blue"];
+
+        luciole.classList.add("firefly");
+        luciole.classList.add(
+            couleurs[Math.floor(Math.random() * couleurs.length)]
+        );
+
+        const x = rect.left - hero.left + Math.random() * rect.width;
+        const y = rect.top - hero.top + Math.random() * rect.height;
+
+        luciole.style.left = x + "px";
+        luciole.style.top = y + "px";
+
+        const taille = 4 + Math.random() * 3;
+
+        luciole.style.width = taille + "px";
+        luciole.style.height = taille + "px";
+
+        luciole.style.animationDuration =
+            (3 + Math.random() * 3) + "s";
+
+        foret.appendChild(luciole);
+    }
+
+} else {
+
     positionsForet
         .sort(() => Math.random() - 0.5)
         .slice(0, 10)
@@ -113,8 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
             creerLuciole(position, "gold", "foret");
 
         });
-
-    if (!smartphone) {
 
     margeGauche
         .sort(() => Math.random() - 0.5)
