@@ -156,16 +156,18 @@ body {
 @media screen and (max-width:768px){
 
     .hero{
-        min-height:auto;
-        padding:20px 20px 25px;
+    min-height:auto;
+    padding:30px 20px 50px;
 
-        display:flex;
-        flex-direction:column;
-        justify-content:flex-start;
-        align-items:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
 
-        overflow:visible;
-    }
+    gap:20px;
+
+    overflow:visible;
+}
 
     .site-emblem{
         position:static;
