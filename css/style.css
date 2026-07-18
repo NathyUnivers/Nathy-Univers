@@ -1007,7 +1007,7 @@ body {
     }
 
     .carte-contenu {
-        padding: 18px;
+        padding: 14px;
     }
 
     .carte-contenu h3 {
@@ -1015,8 +1015,9 @@ body {
     }
 
     .carte-contenu p {
-        font-size: 0.9rem;
-        line-height: 1.5;
+        font-size: 0.85rem;
+        line-height: 1.35;
+        margin-bottom: 12px;
     }
 
     .btn-carte {
