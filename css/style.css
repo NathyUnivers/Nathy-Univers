@@ -1037,6 +1037,14 @@ body {
     justify-items: center;
 }
 
+
+.carte-explorer{
+    width:280px;
+}
+
+.carte-image{
+    height:210px;
+}
 }
 
 .likes-container {
@@ -1114,10 +1122,6 @@ body {
     animation: popLike 0.28s ease;
 }
 
-.carte-explorer {
-    width: 150px !important;
-    border: 10px solid red !important;
-}
 
 
 
