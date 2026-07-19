@@ -1135,6 +1135,11 @@ body {
     font-size: 18px;
 }
 
+.btn-commentaire:hover .icone-commentaire {
+    transform: scale(1.60);
+    transition: transform 0.18s ease;
+}
+
 .icone-coeur {
     width: 24px;
     height: 24px;
@@ -1274,6 +1279,8 @@ body {
     width: 24px;
     height: 24px;
     display: block;
+    object-fit: contain;
+    transition: transform 0.18s ease;
 }
 
 
