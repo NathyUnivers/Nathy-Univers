@@ -728,11 +728,14 @@ body {
 }
 
 .creation .miniature {
-    width: 80%;
-    height: auto;
+    width: 280px;
+    height: 400px;
+
     margin: 0 auto;
+
     object-fit: cover;
     object-position: center;
+
     border-radius: 18px;
     display: block;
 
