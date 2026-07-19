@@ -223,3 +223,31 @@ document.querySelectorAll(".btn-commentaire").forEach(bouton => {
     });
 
 });
+
+document.querySelectorAll(".btn-publier").forEach(bouton => {
+
+    bouton.addEventListener("click", () => {
+
+        const commentaires = bouton.closest(".commentaires-container");
+
+        const champ = commentaires.querySelector(".champ-commentaire");
+        const liste = commentaires.querySelector(".liste-commentaires");
+        const message = commentaires.querySelector(".aucun-commentaire");
+
+        const texte = champ.value.trim();
+
+        if (texte === "") return;
+
+        message.style.display = "none";
+
+        const commentaire = document.createElement("p");
+
+        commentaire.textContent = texte;
+
+        liste.appendChild(commentaire);
+
+        champ.value = "";
+
+    });
+
+});
