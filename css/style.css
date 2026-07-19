@@ -636,7 +636,7 @@ body {
 }
 
 .carte-explorer {
-    width: 360px;
+    width: 150px;
 
     display: flex;
     flex-direction: column;
