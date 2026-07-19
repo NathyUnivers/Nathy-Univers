@@ -725,8 +725,9 @@ body {
 }
 
 .creation .miniature {
-    width: 100%;
-    height: 420px;
+    width: 88%;
+    height: auto;
+    margin: 0 auto;
     object-fit: cover;
     object-position: center;
     border-radius: 18px;
