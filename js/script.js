@@ -201,3 +201,25 @@ if (localStorage.getItem(cleVote)) {
     }
 
 afficherLikes();
+
+document.querySelectorAll(".btn-commentaire").forEach(bouton => {
+
+    bouton.addEventListener("click", () => {
+
+        const creation = bouton.closest(".creation");
+
+        const commentaires = creation.querySelector(".commentaires-container");
+
+        if (commentaires.style.display === "block") {
+
+            commentaires.style.display = "none";
+
+        } else {
+
+            commentaires.style.display = "block";
+
+        }
+
+    });
+
+});
