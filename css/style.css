@@ -1034,9 +1034,10 @@ body {
 
 @media screen and (max-width:480px) {
 
-    .cartes-explorer {
-        grid-template-columns: 1fr;
-    }
+   .cartes-explorer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
 
 }
 
