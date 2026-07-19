@@ -1238,4 +1238,28 @@ body {
     font-style: italic;
 }
 
+.liste-commentaires {
+    margin-top: 20px;
+}
+
+.liste-commentaires p {
+
+    margin: 10px 0;
+
+    padding: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    border-left: 3px solid rgba(185,160,255,.6);
+
+    border-radius: 10px;
+
+    color: white;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+
+}
+
 
