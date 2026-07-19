@@ -1157,7 +1157,7 @@ body {
 .champ-commentaire {
     width: 100%;
 
-    min-height: 90px;
+    min-height: 110px;
 
     margin-top: 15px;
     padding: 12px;
@@ -1189,9 +1189,13 @@ body {
 
 }
 
+.champ-commentaire::placeholder {
+    color: rgba(255,255,255,.45);
+}
+
 .btn-publier {
 
-    margin-top: 15px;
+    margin-top: 18px;
 
     width: 100%;
 
