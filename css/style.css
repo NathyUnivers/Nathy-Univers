@@ -1114,6 +1114,11 @@ body {
     animation: popLike 0.28s ease;
 }
 
+.carte-explorer {
+    width: 150px !important;
+    border: 10px solid red !important;
+}
+
 
 
 
