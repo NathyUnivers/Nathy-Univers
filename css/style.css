@@ -742,6 +742,10 @@ body {
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
+
+    .creation[data-slug="deesse-de-lillusion"] .miniature {
+    object-position: center top;
+}
 }
 
 .portrait {
