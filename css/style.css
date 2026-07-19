@@ -1221,5 +1221,17 @@ body {
 
 }
 
+.commentaires-container h4 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.aucun-commentaire {
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    font-style: italic;
+}
 
 
