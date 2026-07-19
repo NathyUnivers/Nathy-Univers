@@ -720,8 +720,9 @@ body {
 }
 
 .creation {
-    width: 320px;
+    width: 500px;
     text-align: center;
+    background: red;
 }
 
 .creation .miniature {
