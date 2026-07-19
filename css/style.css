@@ -717,6 +717,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+
+    background: blue;
+    border: 5px solid yellow;
 }
 
 .creation {
