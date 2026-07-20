@@ -229,6 +229,8 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
     bouton.addEventListener("click", () => {
 
         const commentaires = bouton.closest(".commentaires-container");
+        const creation = bouton.closest(".creation");
+        const slug = creation.dataset.slug;
 
         const champPseudo = commentaires.querySelector(".champ-pseudo");
         const champ = commentaires.querySelector(".champ-commentaire");
