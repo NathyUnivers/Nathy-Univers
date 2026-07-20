@@ -226,7 +226,7 @@ document.querySelectorAll(".btn-commentaire").forEach(bouton => {
 
 document.querySelectorAll(".btn-publier").forEach(bouton => {
 
-    bouton.addEventListener("click", () => {
+    bouton.addEventListener("click", async () => {
 
         const commentaires = bouton.closest(".commentaires-container");
         const creation = bouton.closest(".creation");
@@ -242,15 +242,25 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
 
     if (texte === "") return;
 
-        message.style.display = "none";
+       message.style.display = "none";
 
-        const commentaire = document.createElement("p");
+       const { error } = await db
+    .from("commentaires")
+    .insert([
+        {
+            slug: slug,
+            pseudo: pseudo,
+            texte: texte
+        }
+    ]);
 
-        commentaire.textContent = texte;
+    if (error) {
+         console.error("Erreur Supabase :", error);
+    return;
+}
 
-        liste.appendChild(commentaire);
-
-        champ.value = "";
+champ.value = "";
+champPseudo.value = "";
 
     });
 
