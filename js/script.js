@@ -250,7 +250,7 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
         {
             slug: slug,
             pseudo: pseudo,
-            texte: texte
+            message: texte
         }
     ]);
 
