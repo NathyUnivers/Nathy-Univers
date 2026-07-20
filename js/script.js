@@ -230,13 +230,15 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
 
         const commentaires = bouton.closest(".commentaires-container");
 
+        const champPseudo = commentaires.querySelector(".champ-pseudo");
         const champ = commentaires.querySelector(".champ-commentaire");
         const liste = commentaires.querySelector(".liste-commentaires");
         const message = commentaires.querySelector(".aucun-commentaire");
 
+        const pseudo = champPseudo.value.trim() || "Anonyme";
         const texte = champ.value.trim();
 
-        if (texte === "") return;
+    if (texte === "") return;
 
         message.style.display = "none";
 
