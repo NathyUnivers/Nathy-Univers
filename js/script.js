@@ -265,3 +265,39 @@ champPseudo.value = "";
     });
 
 });
+
+async function chargerCommentaires(slug, commentaires) {
+
+    const liste = commentaires.querySelector(".liste-commentaires");
+    const message = commentaires.querySelector(".aucun-commentaire");
+
+    const { data, error } = await db
+        .from("commentaires")
+        .select("*")
+        .eq("slug", slug)
+        .order("created_at", { ascending: true });
+
+    if (error) {
+        console.error("Erreur chargement :", error);
+        return;
+    }
+
+    liste.innerHTML = "";
+
+    if (data.length === 0) {
+        message.style.display = "block";
+        return;
+    }
+
+    message.style.display = "none";
+
+    data.forEach(commentaire => {
+
+        const p = document.createElement("p");
+        p.textContent = `${commentaire.pseudo} : ${commentaire.message}`;
+
+        liste.appendChild(p);
+
+    });
+
+}
