@@ -415,6 +415,17 @@ function afficherFormulaireReponse(zoneReponse, commentaireId, pseudo) {
         </button>
     `;
 
+    const boutonEnvoyer = formulaireReponse.querySelector(".btn-envoyer-reponse");
+
+boutonEnvoyer.addEventListener("click", () => {
+
+    const creation = zoneReponse.closest(".creation");
+    const slug = creation.dataset.slug;
+
+    envoyerReponse(slug);
+
+});
+
     zoneReponse.appendChild(formulaireReponse);
 
 }
