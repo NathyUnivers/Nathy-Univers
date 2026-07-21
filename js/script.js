@@ -355,6 +355,12 @@ bloc.innerHTML = `
     </div>
 
     <p class="commentaire-texte">${commentaire.message}</p>
+
+    <button
+        class="btn-repondre"
+        data-id="${commentaire.id}">
+        Répondre
+    </button>
 `;
 
 liste.appendChild(bloc);
