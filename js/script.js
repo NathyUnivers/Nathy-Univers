@@ -201,6 +201,16 @@ if (localStorage.getItem(cleVote)) {
     }
 
 afficherLikes();
+document.querySelectorAll(".creation").forEach(creation => {
+
+    const commentaires = creation.querySelector(".commentaires-container");
+
+    chargerCommentaires(
+        creation.dataset.slug,
+        commentaires
+    );
+
+});
 
 document.querySelectorAll(".btn-commentaire").forEach(bouton => {
 
