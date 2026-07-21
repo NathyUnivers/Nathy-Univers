@@ -267,8 +267,11 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
         }
     ]);
 
-    if (error) {
-         console.error("Erreur Supabase :", error);
+ if (error) {
+    console.error("Erreur Supabase :", error);
+
+    bouton.disabled = false;
+
     return;
 }
 
