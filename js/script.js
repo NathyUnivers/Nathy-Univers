@@ -356,9 +356,21 @@ console.log("Réponses :", reponses);
 
     message.style.display = "none";
 
- data.forEach(commentaire => {
+ commentairesPrincipaux.forEach(commentaire => {
 
     const bloc = creerBlocCommentaire(commentaire);
+
+    const reponsesDuCommentaire = reponses.filter(
+        reponse => reponse.parent_id === commentaire.id
+    );
+
+    reponsesDuCommentaire.forEach(reponse => {
+
+        bloc.appendChild(
+            creerBlocReponse(reponse)
+        );
+
+    });
 
     liste.appendChild(bloc);
 
