@@ -359,6 +359,7 @@ console.log("Réponses :", reponses);
  commentairesPrincipaux.forEach(commentaire => {
 
     const bloc = creerBlocCommentaire(commentaire);
+    const zoneReponse = bloc.querySelector(".zone-reponse");
 
     const reponsesDuCommentaire = reponses.filter(
         reponse => reponse.parent_id === commentaire.id
@@ -366,9 +367,9 @@ console.log("Réponses :", reponses);
 
     reponsesDuCommentaire.forEach(reponse => {
 
-        bloc.appendChild(
-            creerBlocReponse(reponse)
-        );
+       zoneReponse.appendChild(
+    creerBlocReponse(reponse)
+);
 
     });
 
