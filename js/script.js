@@ -458,3 +458,49 @@ async function envoyerReponse(slug) {
     formulaireReponse = null;
 
 }
+
+function creerBlocCommentaire(commentaire) {
+
+    const bloc = document.createElement("div");
+    bloc.className = "commentaire";
+
+    const zoneReponse = document.createElement("div");
+    zoneReponse.className = "zone-reponse";
+
+    bloc.innerHTML = `
+        <div class="commentaire-entete">
+            <strong>${commentaire.pseudo}</strong>
+            <span class="commentaire-separateur">•</span>
+            <span class="commentaire-date">
+                ${formaterDate(commentaire.created_at)}
+            </span>
+        </div>
+
+        <p class="commentaire-texte">
+            ${commentaire.message}
+        </p>
+
+        <button
+            class="btn-repondre"
+            data-id="${commentaire.id}">
+            Répondre
+        </button>
+    `;
+
+    bloc.appendChild(zoneReponse);
+
+    const boutonRepondre = bloc.querySelector(".btn-repondre");
+
+    boutonRepondre.addEventListener("click", () => {
+
+        afficherFormulaireReponse(
+            zoneReponse,
+            commentaire.id,
+            commentaire.pseudo
+        );
+
+    });
+
+    return bloc;
+
+}
