@@ -278,6 +278,7 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
 champ.value = "";
 champPseudo.value = "";
 await chargerCommentaires(slug, commentaires);
+bouton.disabled = false;
 
     });
 
