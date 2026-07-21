@@ -204,9 +204,12 @@ if (localStorage.getItem(cleVote)) {
     let commentaireSelectionne = null;
 
 afficherLikes();
+
 document.querySelectorAll(".creation").forEach(creation => {
 
     const commentaires = creation.querySelector(".commentaires-container");
+
+    if (!commentaires) return;
 
     chargerCommentaires(
         creation.dataset.slug,
