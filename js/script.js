@@ -216,9 +216,10 @@ document.querySelectorAll(".btn-commentaire").forEach(bouton => {
 
         } else {
 
-            commentaires.style.display = "block";
+    commentaires.style.display = "block";
+    chargerCommentaires(creation.dataset.slug, commentaires);
 
-        }
+}
 
     });
 
