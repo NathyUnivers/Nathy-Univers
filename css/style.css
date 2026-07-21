@@ -1255,9 +1255,40 @@ body {
     margin-top: 20px;
 }
 
-.liste-commentaires p {
+.commentaire {
 
-    margin: 10px 0;
+    margin-bottom: 18px;
+
+}
+
+.commentaire-entete {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+.commentaire-entete strong {
+
+    color: white;
+    font-weight: 600;
+
+}
+
+.commentaire-date {
+
+    font-size: 0.82rem;
+
+    color: rgba(185,160,255,.75);
+
+}
+
+.commentaire-texte {
+
+    margin: 0;
 
     padding: 12px;
 
@@ -1269,7 +1300,7 @@ body {
 
     color: white;
 
-    line-height: 1.5;
+    line-height: 1.6;
 
     word-break: break-word;
 
