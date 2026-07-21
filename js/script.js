@@ -284,6 +284,33 @@ bouton.disabled = false;
 
 });
 
+function formaterDate(dateUTC) {
+
+    const date = new Date(dateUTC);
+    const maintenant = new Date();
+
+    const memeJour =
+        date.getDate() === maintenant.getDate() &&
+        date.getMonth() === maintenant.getMonth() &&
+        date.getFullYear() === maintenant.getFullYear();
+
+    const heure = date.toLocaleTimeString("fr-FR", {
+        hour: "2-digit",
+        minute: "2-digit"
+    });
+
+    if (memeJour) {
+        return `Aujourd'hui à ${heure}`;
+    }
+
+    return date.toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    }) + ` à ${heure}`;
+
+}
+
 async function chargerCommentaires(slug, commentaires) {
 
     const liste = commentaires.querySelector(".liste-commentaires");
