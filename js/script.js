@@ -359,7 +359,7 @@ console.log("Réponses :", reponses);
  commentairesPrincipaux.forEach(commentaire => {
 
     const bloc = creerBlocCommentaire(commentaire);
-    const zoneReponse = bloc.querySelector(".zone-reponse");
+    const zoneReponses = bloc.querySelector(".zone-reponses");
 
     const reponsesDuCommentaire = reponses.filter(
         reponse => reponse.parent_id === commentaire.id
@@ -367,7 +367,7 @@ console.log("Réponses :", reponses);
 
     reponsesDuCommentaire.forEach(reponse => {
 
-       zoneReponse.appendChild(
+    zoneReponses.appendChild(
     creerBlocReponse(reponse)
 );
 
@@ -488,10 +488,10 @@ zoneReponses.className = "zone-reponses";
     boutonRepondre.addEventListener("click", () => {
 
         afficherFormulaireReponse(
-            zoneReponse,
-            commentaire.id,
-            commentaire.pseudo
-        );
+    zoneFormulaire,
+    commentaire.id,
+    commentaire.pseudo
+);
 
     });
 
