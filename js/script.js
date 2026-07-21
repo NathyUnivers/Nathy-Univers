@@ -277,6 +277,7 @@ async function chargerCommentaires(slug, commentaires) {
         .select("*")
         .eq("slug", slug)
         .order("created_at", { ascending: true });
+        console.log("Commentaires récupérés :", data);
 
     if (error) {
         console.error("Erreur chargement :", error);
