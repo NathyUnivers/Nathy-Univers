@@ -481,3 +481,26 @@ function creerBlocCommentaire(commentaire) {
     return bloc;
 
 }
+
+function creerBlocReponse(reponse) {
+
+    const bloc = document.createElement("div");
+    bloc.className = "reponse-commentaire";
+
+    bloc.innerHTML = `
+        <div class="commentaire-entete">
+            <strong>🌙 ${reponse.pseudo}</strong>
+            <span class="commentaire-separateur">•</span>
+            <span class="commentaire-date">
+                ${formaterDate(reponse.created_at)}
+            </span>
+        </div>
+
+        <p class="commentaire-texte">
+            ${reponse.message}
+        </p>
+    `;
+
+    return bloc;
+
+}
