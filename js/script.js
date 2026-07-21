@@ -253,7 +253,9 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
 
     if (texte === "") return;
 
-       message.style.display = "none";
+    bouton.disabled = true;
+
+    message.style.display = "none";
 
        const { error } = await db
     .from("commentaires")
