@@ -272,6 +272,9 @@ async function chargerCommentaires(slug, commentaires) {
 
     const liste = commentaires.querySelector(".liste-commentaires");
     const message = commentaires.querySelector(".aucun-commentaire");
+    const compteur = commentaires
+        .closest(".creation")
+        .querySelector(".comments-count");
 
     const { data, error } = await db
         .from("commentaires")
@@ -287,6 +290,7 @@ async function chargerCommentaires(slug, commentaires) {
     }
 
     liste.innerHTML = "";
+    compteur.textContent = data.length;
 
     if (data.length === 0) {
         message.style.display = "block";
