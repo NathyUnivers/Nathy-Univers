@@ -418,3 +418,32 @@ function afficherFormulaireReponse(zoneReponse, commentaireId, pseudo) {
     zoneReponse.appendChild(formulaireReponse);
 
 }
+
+async function envoyerReponse(slug) {
+
+    const champ = formulaireReponse.querySelector(".champ-reponse");
+
+    const texte = champ.value.trim();
+
+    if (texte === "") return;
+
+    const { error } = await db
+        .from("commentaires")
+        .insert([
+            {
+                slug: slug,
+                pseudo: "Nathy",
+                message: texte,
+                parent_id: commentaireSelectionne
+            }
+        ]);
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    formulaireReponse.remove();
+    formulaireReponse = null;
+
+}
