@@ -330,6 +330,14 @@ async function chargerCommentaires(slug, commentaires) {
 
         console.log("Commentaires récupérés :", data);
 
+    const commentairesPrincipaux = data.filter(commentaire => commentaire.parent_id === null);
+
+    const reponses = data.filter(commentaire => commentaire.parent_id !== null);
+
+console.log("Commentaires :", commentairesPrincipaux);
+
+console.log("Réponses :", reponses);
+
     if (error) {
         console.error("Erreur chargement :", error);
         return;
