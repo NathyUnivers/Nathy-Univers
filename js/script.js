@@ -200,6 +200,9 @@ if (localStorage.getItem(cleVote)) {
 };
     }
 
+    let formulaireReponse = null;
+    let commentaireSelectionne = null;
+
 afficherLikes();
 document.querySelectorAll(".creation").forEach(creation => {
 
