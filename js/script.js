@@ -371,6 +371,18 @@ bloc.innerHTML = `
 
 bloc.appendChild(zoneReponse);
 
+const boutonRepondre = bloc.querySelector(".btn-repondre");
+
+boutonRepondre.addEventListener("click", () => {
+
+    afficherFormulaireReponse(
+        zoneReponse,
+        commentaire.id,
+        commentaire.pseudo
+    );
+
+});
+
 liste.appendChild(bloc);
 
     });
