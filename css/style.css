@@ -1347,3 +1347,85 @@ body {
 
 }
 
+/* ==========================
+   FORMULAIRE DE RÉPONSE
+========================== */
+
+.formulaire-reponse {
+
+    margin-top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.titre-reponse {
+
+    color: white;
+    font-weight: 600;
+    font-size: .95rem;
+
+}
+
+.champ-reponse {
+
+    width: 100%;
+    min-height: 90px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(185,160,255,.25);
+
+    background: rgba(255,255,255,.05);
+
+    color: white;
+
+    font-family: inherit;
+    font-size: .95rem;
+
+    box-sizing: border-box;
+
+}
+
+.champ-reponse:focus {
+
+    outline: none;
+
+    border-color: rgba(185,160,255,.55);
+
+}
+
+.btn-envoyer-reponse {
+
+    align-self: flex-end;
+
+    padding: 10px 22px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    background: linear-gradient(135deg,#8b5cf6,#6d28d9);
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .25s;
+
+}
+
+.btn-envoyer-reponse:hover {
+
+    transform: scale(1.03);
+
+}
+
