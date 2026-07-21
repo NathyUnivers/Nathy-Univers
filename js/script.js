@@ -323,7 +323,7 @@ async function chargerCommentaires(slug, commentaires) {
         .from("commentaires")
         .select("*")
         .eq("slug", slug)
-        .order("created_at", { ascending: true });
+        .order("created_at", { ascending: false });
 
         console.log("Commentaires récupérés :", data);
 
