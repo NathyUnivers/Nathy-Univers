@@ -454,8 +454,11 @@ function creerBlocCommentaire(commentaire) {
     const bloc = document.createElement("div");
     bloc.className = "commentaire";
 
-    const zoneReponse = document.createElement("div");
-    zoneReponse.className = "zone-reponse";
+    const zoneFormulaire = document.createElement("div");
+zoneFormulaire.className = "zone-formulaire";
+
+    const zoneReponses = document.createElement("div");
+zoneReponses.className = "zone-reponses";
 
     bloc.innerHTML = `
         <div class="commentaire-entete">
@@ -477,7 +480,8 @@ function creerBlocCommentaire(commentaire) {
         </button>
     `;
 
-    bloc.appendChild(zoneReponse);
+    bloc.appendChild(zoneFormulaire);
+    bloc.appendChild(zoneReponses);
 
     const boutonRepondre = bloc.querySelector(".btn-repondre");
 
