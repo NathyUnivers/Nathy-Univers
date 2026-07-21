@@ -262,6 +262,7 @@ document.querySelectorAll(".btn-publier").forEach(bouton => {
 
 champ.value = "";
 champPseudo.value = "";
+await chargerCommentaires(slug, commentaires);
 
     });
 
@@ -277,6 +278,7 @@ async function chargerCommentaires(slug, commentaires) {
         .select("*")
         .eq("slug", slug)
         .order("created_at", { ascending: true });
+
         console.log("Commentaires récupérés :", data);
 
     if (error) {
