@@ -506,7 +506,13 @@ function creerBlocReponse(reponse) {
 
     bloc.innerHTML = `
         <div class="commentaire-entete">
-            <strong>🌙 ${reponse.pseudo}</strong>
+            <strong class="auteur-nathy">
+    <img
+        src="images/nathy-n.png"
+        class="embleme-nathy"
+        alt="Emblème de Nathy">
+    ${reponse.pseudo}
+</strong>
             <span class="commentaire-separateur">•</span>
             <span class="commentaire-date">
                 ${formaterDate(reponse.created_at)}
