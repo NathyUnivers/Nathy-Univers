@@ -347,6 +347,9 @@ async function chargerCommentaires(slug, commentaires) {
        const bloc = document.createElement("div");
 bloc.className = "commentaire";
 
+       const zoneReponse = document.createElement("div");
+       zoneReponse.className = "zone-reponse";
+
 bloc.innerHTML = `
     <div class="commentaire-entete">
         <strong>${commentaire.pseudo}</strong>
@@ -362,6 +365,8 @@ bloc.innerHTML = `
         Répondre
     </button>
 `;
+
+bloc.appendChild(zoneReponse);
 
 liste.appendChild(bloc);
 
