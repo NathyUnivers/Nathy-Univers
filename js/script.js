@@ -344,10 +344,19 @@ async function chargerCommentaires(slug, commentaires) {
 
     data.forEach(commentaire => {
 
-        const p = document.createElement("p");
-        p.textContent = `${commentaire.pseudo} : ${commentaire.message}`;
+       const bloc = document.createElement("div");
+bloc.className = "commentaire";
 
-        liste.appendChild(p);
+bloc.innerHTML = `
+    <div class="commentaire-entete">
+        <strong>${commentaire.pseudo}</strong>
+        <span class="commentaire-date">${formaterDate(commentaire.created_at)}</span>
+    </div>
+
+    <p class="commentaire-texte">${commentaire.message}</p>
+`;
+
+liste.appendChild(bloc);
 
     });
 
