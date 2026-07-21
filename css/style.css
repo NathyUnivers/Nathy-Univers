@@ -1321,3 +1321,29 @@ body {
     transition: transform 0.18s ease;
 }
 
+.btn-repondre {
+
+    margin-top: 10px;
+
+    padding: 6px 12px;
+
+    background: transparent;
+
+    border: none;
+
+    color: rgba(185,160,255,.85);
+
+    font-size: .85rem;
+
+    cursor: pointer;
+
+    transition: color .25s ease;
+
+}
+
+.btn-repondre:hover {
+
+    color: white;
+
+}
+
