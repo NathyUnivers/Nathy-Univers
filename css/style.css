@@ -1278,6 +1278,14 @@ body {
 
 }
 
+.commentaire-separateur {
+
+    color: rgba(185,160,255,.75);
+
+    font-size: 0.85rem;
+
+}
+
 .commentaire-date {
 
     font-size: 0.82rem;

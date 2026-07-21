@@ -350,6 +350,7 @@ bloc.className = "commentaire";
 bloc.innerHTML = `
     <div class="commentaire-entete">
         <strong>${commentaire.pseudo}</strong>
+        <span class="commentaire-separateur">•</span>
         <span class="commentaire-date">${formaterDate(commentaire.created_at)}</span>
     </div>
 
