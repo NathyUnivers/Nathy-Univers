@@ -376,3 +376,33 @@ liste.appendChild(bloc);
     });
 
 }
+
+function afficherFormulaireReponse(zoneReponse, commentaireId, pseudo) {
+
+    commentaireSelectionne = commentaireId;
+
+    if (formulaireReponse) {
+        formulaireReponse.remove();
+    }
+
+    formulaireReponse = document.createElement("div");
+    formulaireReponse.className = "formulaire-reponse";
+
+    formulaireReponse.innerHTML = `
+        <div class="titre-reponse">
+            🌙 Réponse à <strong>${pseudo}</strong>
+        </div>
+
+        <textarea
+            class="champ-reponse"
+            rows="4"
+            placeholder="Écrire une réponse..."></textarea>
+
+        <button class="btn-envoyer-reponse">
+            Envoyer
+        </button>
+    `;
+
+    zoneReponse.appendChild(formulaireReponse);
+
+}
