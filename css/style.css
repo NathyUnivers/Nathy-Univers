@@ -235,6 +235,8 @@ body {
 
 }
 
+@media screen and (max-width:768px){
+
 /* ==========================
    HERO MOBILE DÉDIÉ
 ========================== */
@@ -274,6 +276,7 @@ body {
 
 .hero-mobile-content .btn-decouvrir{
     margin: 0;
+}
 }
 
 
