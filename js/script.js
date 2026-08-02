@@ -21,6 +21,13 @@ if (lightbox) {
 
 let zoom = 1;
 
+let estEnTrainDeDeplacer = false;
+let positionDepartX = 0;
+let positionDepartY = 0;
+
+let translationX = 0;
+let translationY = 0;
+
     // ==========================
     // OUVRIR LA LIGHTBOX
     // ==========================
