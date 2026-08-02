@@ -68,6 +68,23 @@ let zoom = 1;
 
     });
 
+    imageLightbox.addEventListener("wheel", function (e) {
+
+    e.preventDefault();
+
+    if (e.deltaY < 0) {
+        zoom += 0.2;
+    } else {
+        zoom -= 0.2;
+    }
+
+    if (zoom < 1) zoom = 1;
+    if (zoom > 4) zoom = 4;
+
+    imageLightbox.style.transform = `scale(${zoom})`;
+
+});
+
     // ==========================
     // CHANGER D'IMAGE
     // ==========================
