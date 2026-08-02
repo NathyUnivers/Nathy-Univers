@@ -105,6 +105,18 @@ imageLightbox.addEventListener("mousedown", function (e) {
 
 });
 
+document.addEventListener("mousemove", function (e) {
+
+    if (!estEnTrainDeDeplacer) return;
+
+    translationX = e.clientX - positionDepartX;
+    translationY = e.clientY - positionDepartY;
+
+    imageLightbox.style.transform =
+        `translate(${translationX}px, ${translationY}px) scale(${zoom})`;
+
+});
+
     // ==========================
     // CHANGER D'IMAGE
     // ==========================
