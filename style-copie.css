@@ -1,0 +1,1462 @@
+/* ===========================
+   NATHY UNIVERSE
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101018;
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100d1b;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    width: 75%;
+    max-width: 1600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Voile discret */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(18px);
+    background: rgba(0,0,0,0.25);
+    pointer-events: none;
+}
+
+/* Bloc texte */
+
+.hero-content {
+    position: absolute;
+    top: 34%;
+    right: 8%;
+    transform: translateY(-50%);
+    width: 38%;
+    text-align: left;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(3rem,5vw,5rem);
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+    color: #f6f3ec;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,.92);
+    margin-bottom: 25px;
+    padding-left: 50px;
+}
+
+/* Bouton */
+
+.btn-decouvrir {
+    display:inline-block;
+    margin-left:195px;
+    margin-top:22px;
+    padding:15px 42px;
+    border:2px solid rgba(218,214,232,.82);
+    border-radius:40px;
+    color:#f5f5f8;
+    text-decoration:none;
+    background:rgba(255,255,255,.03);
+    transition:all .35s ease;
+    letter-spacing:1px;
+}
+
+.btn-decouvrir:hover{
+    background:rgba(255,255,255,.12);
+    border-color:rgba(220,215,235,.95);
+    color:white;
+    box-shadow:0 0 18px rgba(205,190,235,.28);
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   EMBLÈME
+========================================== */
+
+.site-emblem{
+    position:absolute;
+    top:25px;
+    left:20px;
+    z-index:20;
+    width:100px;
+    height:100px;
+}
+
+.site-emblem img{
+    width:95px;
+    height:auto;
+    display:block;
+    opacity:.92;
+    filter:
+      drop-shadow(0 0 6px rgba(190,175,255,.22))
+      drop-shadow(0 0 18px rgba(165,125,255,.12));
+    animation:moonGlow 10s ease-in-out infinite;
+}
+
+@keyframes moonGlow{
+    0%{
+        filter:
+        drop-shadow(0 0 5px rgba(190,175,255,.18))
+        drop-shadow(0 0 14px rgba(165,125,255,.08));
+    }
+    50%{
+        filter:
+        drop-shadow(0 0 8px rgba(190,175,255,.28))
+        drop-shadow(0 0 22px rgba(165,125,255,.16));
+    }
+    100%{
+        filter:
+        drop-shadow(0 0 5px rgba(190,175,255,.18))
+        drop-shadow(0 0 14px rgba(165,125,255,.08));
+    }
+}
+
+/* ==========================================================
+   HERO - VERSION SMARTPHONE
+========================================================== */
+
+@media screen and (max-width:768px){
+
+    .hero{
+        min-height:auto;
+        padding:35px 20px 60px;
+
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
+
+        overflow:visible;
+    }
+
+    .site-emblem{
+        position:static;
+        width:90px;
+        height:auto;
+        margin:0 auto 25px;
+    }
+
+    .site-emblem img{
+        width:90px;
+        display:block;
+        margin:auto;
+    }
+
+   .hero-image{
+    width:100%;
+    max-width:620px;
+    height:auto;
+    display:block;
+    margin:0 auto 30px;
+}
+
+    .overlay{
+        display:none;
+    }
+
+    .hero-content{
+    position:static;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    width:100%;
+    max-width:360px;
+
+    margin:35px auto 0;
+
+    transform:none;
+    text-align:center;
+}
+
+   .hero h1{
+    font-size:2rem;
+    line-height:1.15;
+    letter-spacing:1px;
+
+    margin-top:25px;
+    margin-bottom:16px;
+}
+
+    .hero p{
+        margin:0;
+        padding:0;
+
+        font-size:1.05rem;
+        line-height:1.6;
+    }
+
+    .btn-decouvrir{
+        display:inline-block;
+        margin-top:28px;
+        margin-left:0;
+
+        padding:14px 34px;
+    }
+
+}
+
+/* ==========================
+   HERO MOBILE DÉDIÉ
+========================== */
+
+.hero-content{
+    display: none;
+}
+
+.hero-mobile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: 360px;
+
+    margin: 30px auto 0;
+
+    text-align: center;
+}
+
+.hero-mobile-content h1{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.hero-mobile-content p{
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+.hero-mobile-content .btn-decouvrir{
+    margin: 0;
+}
+
+
+/* ===========================
+   PRÉSENTATION
+=========================== */
+
+.presentation {
+
+    background: #101010;
+
+    padding: 130px 10%;
+
+}
+
+.container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+.presentation h2 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+    margin-bottom: 30px;
+
+}
+
+.presentation p {
+
+    text-align: center;
+
+    color: #d5d5d5;
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+
+}
+
+/* ===========================
+   CATÉGORIES
+=========================== */
+
+.categories {
+
+    background: #181818;
+
+    padding: 130px 10%;
+
+    min-height: 700px;
+
+}
+
+.categories h2 {
+
+    text-align: center;
+
+    font-size: 2.5rem;
+
+}
+
+/* ==========================================
+   LUCIOLES
+========================================== */
+
+.fireflies {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+
+    background: #ffe89a;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px #ffe89a,
+        0 0 18px rgba(255, 232, 154, 0.8);
+
+    opacity: 0;
+
+    animation: floatFirefly 18s ease-in-out infinite,
+               glowFirefly 4s ease-in-out infinite;
+}
+
+/* Position de chaque luciole */
+
+.firefly:nth-child(1) {
+    left: 12%;
+    top: 72%;
+    animation-delay: 0s;
+}
+
+.firefly:nth-child(2) {
+    left: 24%;
+    top: 48%;
+    animation-delay: 3s;
+}
+
+.firefly:nth-child(3) {
+    left: 37%;
+    top: 68%;
+    animation-delay: 6s;
+}
+
+.firefly:nth-child(4) {
+    left: 63%;
+    top: 38%;
+    animation-delay: 2s;
+}
+
+.firefly:nth-child(5) {
+    left: 77%;
+    top: 62%;
+    animation-delay: 8s;
+}
+
+.firefly:nth-child(6) {
+    left: 90%;
+    top: 44%;
+    animation-delay: 5s;
+}
+
+/* Déplacement très lent */
+
+@keyframes floatFirefly {
+
+    0% {
+        transform: translate(0,0);
+    }
+
+    25% {
+        transform: translate(-10px,-18px);
+    }
+
+    50% {
+        transform: translate(8px,-35px);
+    }
+
+    75% {
+        transform: translate(-6px,-18px);
+    }
+
+    100% {
+        transform: translate(0,0);
+    }
+
+}
+
+/* Scintillement */
+
+@keyframes glowFirefly {
+
+    0%,
+    100% {
+        opacity: .15;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: .9;
+        transform: scale(1.15);
+    }
+
+}
+
+/* ==========================================
+   FORÊT VIVANTE
+========================================== */
+
+#foret-vivante {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Luciole de base */
+
+.firefly {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+
+    animation: scintillement 4s ease-in-out infinite;
+}
+
+/* Dorée */
+
+.firefly.gold {
+    background: #ffd76b;
+
+    box-shadow:
+        0 0 6px #ffd76b,
+        0 0 14px rgba(255,215,107,.8);
+}
+
+/* Argentée */
+
+.firefly.silver {
+    background: #f2f2f2;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 12px rgba(255,255,255,.7);
+}
+
+/* Bleu lunaire */
+
+.firefly.blue {
+    background: #b8d9ff;
+
+    box-shadow:
+        0 0 6px #b8d9ff,
+        0 0 14px rgba(184,217,255,.75);
+}
+
+/* Animation de scintillement */
+
+@keyframes scintillement {
+
+    0% {
+        opacity: .15;
+        transform: translate(-50%, -50%) scale(.85);
+    }
+
+    50% {
+        opacity: .95;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        opacity: .15;
+        transform: translate(-50%, -50%) scale(.85);
+    }
+
+}
+
+/* ==========================================================
+   SECTION EXPLORER
+========================================================== */
+
+.explorer {
+    position: relative;
+    overflow: hidden;
+
+    padding: 120px 8%;
+    background: linear-gradient(to bottom, #1b202b, #141822);
+    text-align: center;
+}
+
+.explorer-contenu {
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.explorer h2 {
+    font-size: 2.8rem;
+    color: #f5f5f5;
+    margin-bottom: 50px;
+}
+
+.explorer-intro {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #cfcfd8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ==========================
+   Halos vivants
+========================== */
+
+.explorer::before,
+.explorer::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    opacity: 0.10;
+}
+
+.explorer::before {
+    width: 700px;
+    height: 700px;
+
+    background: rgba(70, 215, 255, 0.35);
+
+    top: -180px;
+    left: -220px;
+
+    animation: halo-gauche 26s ease-in-out infinite;
+}
+
+.explorer::after {
+    width: 650px;
+    height: 650px;
+
+    background: rgba(165, 95, 255, 0.30);
+
+    bottom: -220px;
+    right: -180px;
+
+    animation: halo-droite 32s ease-in-out infinite;
+}
+
+@keyframes halo-gauche {
+
+    0%   { transform: translate(0,0) scale(1); }
+
+    50%  { transform: translate(70px,40px) scale(1.12); }
+
+    100% { transform: translate(0,0) scale(1); }
+
+}
+
+@keyframes halo-droite {
+
+    0%   { transform: translate(0,0) scale(1); }
+
+    50%  { transform: translate(-60px,-50px) scale(1.10); }
+
+    100% { transform: translate(0,0) scale(1); }
+
+}
+
+/* ==========================================================
+   CARTE EXPLORER
+========================================================== */
+
+.cartes-explorer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+.carte-explorer {
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte-explorer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(185, 160, 255, 0.25);
+}
+
+.carte-image {
+    height: 340px;
+    background: linear-gradient(135deg, #2b2b38, #1a1a22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carte-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+.dragon-fusion {
+    object-position: center;
+}
+
+.carte-contenu {
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.carte-contenu h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.carte-contenu p {
+    color: #cfcfd8;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-carte {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.25);
+    transition: 0.3s;
+}
+
+.btn-carte:hover {
+    background: rgba(185,160,255,0.18);
+    border-color: rgba(185,160,255,0.45);
+}
+
+/* ==========================
+   GALERIE DES CRÉATIONS
+========================== */
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.creation {
+    width: 320px;
+    text-align: center;
+}
+
+.creation .miniature {
+    width: 280px;
+    height: 400px;
+
+    margin: 0 auto;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 18px;
+    display: block;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    .creation[data-slug="deesse-de-lillusion"] .miniature {
+    object-position: center 10%;
+}
+}
+
+.portrait {
+    object-position: center 20%;
+}
+
+.creation .miniature:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(185, 160, 255, 0.28);
+}
+
+.creation h3 {
+    margin-top: 15px;
+}
+
+.retour-accueil {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.btn-retour {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-retour:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+}
+
+.image-complete {
+    object-fit: contain !important;
+    background: transparent;
+}
+
+/* ==========================
+   LIGHTBOX
+========================== */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.35s ease;
+
+    z-index: 9999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 18px;
+
+    transform: scale(0.92);
+    transition: transform 0.35s ease;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+.fermer-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
+    font-size: 42px;
+    color: silver;
+
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.fermer-lightbox:hover {
+    color: white;
+}
+
+/* ==========================
+   FLÈCHES LIGHTBOX
+========================== */
+
+.fleche-lightbox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 34px;
+    font-weight: 300;
+
+    color: rgba(230, 230, 235, 0.38);
+
+    cursor: pointer;
+    user-select: none;
+
+    opacity: .45;
+
+    transition:
+        opacity .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.fleche-gauche {
+    left: 24px;
+}
+
+.fleche-droite {
+    right: 24px;
+}
+
+.fleche-lightbox:hover {
+    opacity: .95;
+    color: rgb(245,245,248);
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* ==========================
+   SIGNATURE LIGHTBOX
+========================== */
+
+.signature-lightbox {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    width: 90px;
+    height: auto;
+
+    opacity: 0.15;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .hero-content {
+
+        width: 30%;
+
+        top: 50%;
+        right: 15%;
+
+        transform: translateY(-50%);
+        text-align: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2rem;
+       
+    }
+
+    .hero p {
+
+        font-size: 0.9rem;
+        line-height: 1.5;
+    
+        padding-left: 0;
+
+    }
+
+    .btn-decouvrir {
+
+    display: inline-block;
+    margin-left: 0;
+
+    margin-top: 20px;
+
+    padding: 10px 22px;
+
+    font-size: 0.9rem;
+
+}
+
+}
+
+/* ==========================
+   Fond vivant - Nathy Universe
+========================== */
+
+.explorer {
+    position: relative;
+    overflow: hidden;
+
+    padding: 120px 8%;
+    background: #0b0b10;
+    text-align: center;
+}
+
+#aurores {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.explorer-contenu {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================
+   RESPONSIVE - CARTES EXPLORER
+========================================================== */
+
+@media screen and (max-width:768px) {
+
+    /* Rapproche les sections */
+    .presentation {
+        padding: 70px 8% 50px;
+    }
+
+    .explorer {
+        padding: 60px 4% 70px;
+    }
+
+    .explorer h2 {
+        margin-bottom: 15px;
+    }
+
+    .explorer-intro {
+        margin-bottom: 80px;
+    }
+
+    /* Cartes */
+    .cartes-explorer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .carte-explorer {
+        width: 100%;
+    }
+
+    .carte-image {
+        height: 220px;
+    }
+
+    .carte-contenu {
+        padding: 14px;
+    }
+
+    .carte-contenu h3 {
+        font-size: 1.1rem;
+    }
+
+    .carte-contenu p {
+        font-size: 0.85rem;
+        line-height: 1.35;
+        margin-bottom: 12px;
+    }
+
+    .btn-carte {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+/* Très petits téléphones */
+
+@media screen and (max-width:480px) {
+
+   .cartes-explorer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+
+.carte-explorer{
+    width:280px;
+}
+
+.carte-image{
+    height:210px;
+}
+}
+
+.likes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-like {
+    background: none;
+    border: none;
+    font-size: 1.35rem;
+    cursor: pointer;
+    color: #ffffff;
+    transition:
+        color 0.25s ease,
+        transform 0.2s ease,
+        text-shadow 0.25s ease;
+}
+
+.btn-like:hover .icone-coeur {
+    transform: scale(1.60);
+    transition: transform 0.18s ease;
+}
+
+.likes-count {
+    font-weight: 600;
+}
+
+/* ---------- Bouton Coup de cœur ---------- */
+
+@keyframes popLike {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.35);
+    }
+
+    65% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-like {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-commentaire {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.btn-commentaire:hover .icone-commentaire {
+    transform: scale(1.60);
+    transition: transform 0.18s ease;
+}
+
+.icone-coeur {
+    width: 30px;
+    height: 30px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.18s ease;
+}
+
+.icone-coeur.pop {
+    animation: popLike 0.28s ease;
+}
+
+.commentaires-container {
+    display: none;
+
+    margin-top: 18px;
+    padding: 18px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(185,160,255,0.20);
+
+    border-radius: 18px;
+
+    text-align: left;
+}
+
+.champ-commentaire {
+    width: 100%;
+
+    min-height: 110px;
+
+    margin-top: 15px;
+    padding: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(185,160,255,0.18);
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+
+    resize: vertical;
+
+    outline: none;
+
+    transition: border-color .25s ease,
+                box-shadow .25s ease;
+}
+
+.champ-commentaire:focus {
+
+    border-color: rgba(185,160,255,.55);
+
+    box-shadow: 0 0 10px rgba(185,160,255,.20);
+
+}
+
+.champ-commentaire::placeholder {
+    color: rgba(255,255,255,.45);
+}
+
+.btn-publier {
+
+    margin-top: 18px;
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    color: white;
+
+    border: 1px solid rgba(185,160,255,.35);
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+
+    font-size: .95rem;
+
+}
+
+.btn-publier:hover {
+
+    background: rgba(185,160,255,.18);
+
+    border-color: rgba(185,160,255,.55);
+
+}
+
+.commentaires-container h4 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.aucun-commentaire {
+    margin-bottom: 15px;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.liste-commentaires {
+    margin-top: 20px;
+}
+
+.commentaire {
+
+    margin-bottom: 18px;
+
+}
+
+.commentaire-entete {
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+}
+
+.commentaire-entete strong {
+
+    color: white;
+    font-weight: 600;
+
+}
+
+.commentaire-separateur {
+
+    color: rgba(185,160,255,.75);
+
+    font-size: 0.85rem;
+
+}
+
+.commentaire-date {
+
+    font-size: 0.82rem;
+
+    color: rgba(185,160,255,.75);
+
+}
+
+.commentaire-texte {
+
+    margin: 0;
+
+    padding: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    border-left: 3px solid rgba(185,160,255,.6);
+
+    border-radius: 10px;
+
+    color: white;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+
+}
+
+.icone-commentaire {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: transform 0.18s ease;
+}
+
+.btn-repondre {
+
+    margin-top: 10px;
+
+    padding: 6px 12px;
+
+    background: transparent;
+
+    border: none;
+
+    color: rgba(185,160,255,.85);
+
+    font-size: .85rem;
+
+    cursor: pointer;
+
+    transition: color .25s ease;
+
+}
+
+.btn-repondre:hover {
+
+    color: white;
+
+}
+
+/* ==========================
+   FORMULAIRE DE RÉPONSE
+========================== */
+
+.formulaire-reponse {
+
+    margin-top: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.titre-reponse {
+
+    color: white;
+    font-weight: 600;
+    font-size: .95rem;
+
+}
+
+.champ-reponse {
+
+    width: 100%;
+    min-height: 90px;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(185,160,255,.25);
+
+    background: rgba(255,255,255,.05);
+
+    color: white;
+
+    font-family: inherit;
+    font-size: .95rem;
+
+    box-sizing: border-box;
+
+}
+
+.champ-reponse:focus {
+
+    outline: none;
+
+    border-color: rgba(185,160,255,.55);
+
+}
+
+.btn-envoyer-reponse {
+
+    align-self: flex-end;
+
+    padding: 10px 22px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    background: linear-gradient(135deg,#8b5cf6,#6d28d9);
+
+    color: white;
+
+    font-weight: 600;
+
+    transition: .25s;
+
+}
+
+.btn-envoyer-reponse:hover {
+
+    transform: scale(1.03);
+
+}
+
+/* ==========================
+   RÉPONSES
+========================== */
+
+.reponse-commentaire {
+
+    margin-top: 14px;
+    margin-left: 40px;
+
+    padding: 14px;
+
+    border-left: 3px solid rgba(185,160,255,.45);
+
+    background: rgba(255,255,255,.03);
+
+    border-radius: 12px;
+
+}
+
+.auteur-nathy{
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
+
+.embleme-nathy{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    flex-shrink:0;
+}
