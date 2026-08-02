@@ -19,6 +19,55 @@ if (lightbox) {
     // ZOOM
     // ==========================
 
+    const panzoom = Panzoom(imageLightbox, {
+        minScale: 1,
+        maxScale: 4,
+        startScale: 1,
+        cursor: "default",
+        disablePan: true
+    });
+
+    // Évite le défilement de la page pendant le zoom et permet Panzoom sur mobile.
+    imageLightbox.style.touchAction = "none";
+
+    function mettreAJourDeplacement() {
+
+        const estZoome = panzoom.getScale() > 1.01;
+
+        // L'image ne peut être déplacée qu'une fois zoomée.
+        panzoom.setOptions({
+            disablePan: !estZoome,
+            cursor: estZoome ? "grab" : "default"
+        });
+
+    }
+
+    function reinitialiserZoom() {
+
+        panzoom.reset({ animate: false });
+        mettreAJourDeplacement();
+
+    }
+
+    imageLightbox.parentElement.addEventListener("wheel", (event) => {
+
+        event.preventDefault();
+        panzoom.zoomWithWheel(event);
+
+    }, { passive: false });
+
+    imageLightbox.addEventListener("panzoomchange", mettreAJourDeplacement);
+
+    imageLightbox.addEventListener("pointerdown", () => {
+
+        if (panzoom.getScale() > 1.01) {
+            imageLightbox.style.cursor = "grabbing";
+        }
+
+    });
+
+    imageLightbox.addEventListener("pointerup", mettreAJourDeplacement);
+    imageLightbox.addEventListener("pointercancel", mettreAJourDeplacement);
 
 
     // ==========================
@@ -34,6 +83,8 @@ if (lightbox) {
             imageLightbox.src = image.src;
             imageLightbox.alt = image.alt;
 
+            reinitialiserZoom();
+
             lightbox.classList.add("active");
 
         });
@@ -47,6 +98,7 @@ if (lightbox) {
   function fermer() {
 
     lightbox.classList.remove("active");
+    reinitialiserZoom();
 
 
 }
@@ -75,6 +127,7 @@ if (lightbox) {
 
    function afficherImage(index) {
 
+    reinitialiserZoom();
     imageLightbox.src = images[index].src;
     imageLightbox.alt = images[index].alt;
 
@@ -110,6 +163,25 @@ if (lightbox) {
 
 }
 
+// ==========================
+// PROTECTION DES IMAGES
+// ==========================
+
+document.querySelectorAll("img").forEach((image) => {
+
+    image.addEventListener("contextmenu", (event) => {
+
+        event.preventDefault();
+
+    });
+
+    image.addEventListener("dragstart", (event) => {
+
+        event.preventDefault();
+
+    });
+
+});
 // ==========================
 // PROTECTION DES IMAGES
 // ==========================
