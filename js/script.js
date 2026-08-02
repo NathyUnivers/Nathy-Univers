@@ -117,6 +117,14 @@ document.addEventListener("mousemove", function (e) {
 
 });
 
+document.addEventListener("mouseup", function () {
+
+    estEnTrainDeDeplacer = false;
+
+    imageLightbox.style.cursor = "grab";
+
+});
+
     // ==========================
     // CHANGER D'IMAGE
     // ==========================
