@@ -51,11 +51,21 @@ let translationY = 0;
     // FERMER
     // ==========================
 
-    function fermer() {
+  function fermer() {
 
-        lightbox.classList.remove("active");
+    lightbox.classList.remove("active");
 
-    }
+    zoom = 1;
+    translationX = 0;
+    translationY = 0;
+    estEnTrainDeDeplacer = false;
+
+    imageLightbox.style.transform =
+        "translate(0px, 0px) scale(1)";
+
+    imageLightbox.style.cursor = "grab";
+
+}
 
     fermerLightbox.addEventListener("click", fermer);
 
