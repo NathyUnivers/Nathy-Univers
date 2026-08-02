@@ -19,14 +19,7 @@ if (lightbox) {
     // ZOOM
     // ==========================
 
-let zoom = 1;
 
-let estEnTrainDeDeplacer = false;
-let positionDepartX = 0;
-let positionDepartY = 0;
-
-let translationX = 0;
-let translationY = 0;
 
     // ==========================
     // OUVRIR LA LIGHTBOX
@@ -55,15 +48,6 @@ let translationY = 0;
 
     lightbox.classList.remove("active");
 
-    zoom = 1;
-    translationX = 0;
-    translationY = 0;
-    estEnTrainDeDeplacer = false;
-
-    imageLightbox.style.transform =
-        "translate(0px, 0px) scale(1)";
-
-    imageLightbox.style.cursor = "grab";
 
 }
 
@@ -85,56 +69,6 @@ let translationY = 0;
 
     });
 
-    imageLightbox.addEventListener("wheel", function (e) {
-
-    e.preventDefault();
-
-    if (e.deltaY < 0) {
-        zoom += 0.2;
-    } else {
-        zoom -= 0.2;
-    }
-
-    if (zoom < 1) zoom = 1;
-    if (zoom > 4) zoom = 4;
-
-    imageLightbox.style.transform = `scale(${zoom})`;
-
-});
-
-imageLightbox.addEventListener("mousedown", function (e) {
-
-    if (zoom <= 1) return;
-
-    estEnTrainDeDeplacer = true;
-
-    positionDepartX = e.clientX - translationX;
-    positionDepartY = e.clientY - translationY;
-
-    imageLightbox.style.cursor = "grabbing";
-
-});
-
-document.addEventListener("mousemove", function (e) {
-
-    if (!estEnTrainDeDeplacer) return;
-
-    translationX = e.clientX - positionDepartX;
-    translationY = e.clientY - positionDepartY;
-
-    imageLightbox.style.transform =
-        `translate(${translationX}px, ${translationY}px) scale(${zoom})`;
-
-});
-
-document.addEventListener("mouseup", function () {
-
-    estEnTrainDeDeplacer = false;
-
-    imageLightbox.style.cursor = "grab";
-
-});
-
     // ==========================
     // CHANGER D'IMAGE
     // ==========================
@@ -144,10 +78,6 @@ document.addEventListener("mouseup", function () {
     imageLightbox.src = images[index].src;
     imageLightbox.alt = images[index].alt;
 
-    zoom = 1;
-
-translationX = 0;
-translationY = 0;
 
 imageLightbox.style.transform =
     "translate(0px, 0px) scale(1)";
