@@ -16,6 +16,12 @@ if (lightbox) {
     let imageCourante = 0;
 
     // ==========================
+    // ZOOM
+    // ==========================
+
+let zoom = 1;
+
+    // ==========================
     // OUVRIR LA LIGHTBOX
     // ==========================
 
@@ -66,12 +72,15 @@ if (lightbox) {
     // CHANGER D'IMAGE
     // ==========================
 
-    function afficherImage(index) {
+   function afficherImage(index) {
 
-        imageLightbox.src = images[index].src;
-        imageLightbox.alt = images[index].alt;
+    imageLightbox.src = images[index].src;
+    imageLightbox.alt = images[index].alt;
 
-    }
+    zoom = 1;
+    imageLightbox.style.transform = "scale(1)";
+
+}
 
     flecheDroite.addEventListener("click", (event) => {
 
