@@ -78,12 +78,6 @@ if (lightbox) {
     imageLightbox.src = images[index].src;
     imageLightbox.alt = images[index].alt;
 
-
-imageLightbox.style.transform =
-    "translate(0px, 0px) scale(1)";
-
-imageLightbox.style.cursor = "grab";
-
 }
 
     flecheDroite.addEventListener("click", (event) => {
