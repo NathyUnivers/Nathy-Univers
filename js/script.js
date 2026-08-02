@@ -135,7 +135,14 @@ document.addEventListener("mouseup", function () {
     imageLightbox.alt = images[index].alt;
 
     zoom = 1;
-    imageLightbox.style.transform = "scale(1)";
+
+translationX = 0;
+translationY = 0;
+
+imageLightbox.style.transform =
+    "translate(0px, 0px) scale(1)";
+
+imageLightbox.style.cursor = "grab";
 
 }
 
