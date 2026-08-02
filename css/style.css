@@ -824,8 +824,7 @@ body {
     max-height: 90%;
     border-radius: 18px;
 
-    transform: scale(0.92);
-    transition: transform 0.35s ease;
+    transition: opacity 0.35s ease;
 }
 
 .lightbox.active img {
