@@ -80,12 +80,12 @@ if (lightbox) {
 
             imageCourante = index;
 
-            imageLightbox.src = image.src;
-            imageLightbox.alt = image.alt;
+           imageLightbox.src = image.src;
+           imageLightbox.alt = image.alt;
 
-            reinitialiserZoom();
+           lightbox.classList.add("active");
 
-            lightbox.classList.add("active");
+           reinitialiserZoom();
 
         });
 
