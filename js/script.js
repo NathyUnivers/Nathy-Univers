@@ -92,6 +92,19 @@ let translationY = 0;
 
 });
 
+imageLightbox.addEventListener("mousedown", function (e) {
+
+    if (zoom <= 1) return;
+
+    estEnTrainDeDeplacer = true;
+
+    positionDepartX = e.clientX - translationX;
+    positionDepartY = e.clientY - translationY;
+
+    imageLightbox.style.cursor = "grabbing";
+
+});
+
     // ==========================
     // CHANGER D'IMAGE
     // ==========================
