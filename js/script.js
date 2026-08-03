@@ -15,30 +15,35 @@ if (lightbox) {
 
     let imageCourante = 0;
 
+
+    const viewportLightbox = lightbox.querySelector(".lightbox-viewport");
+
     // ==========================
     // ZOOM
     // ==========================
-    const lightboxViewport = document.querySelector(".lightbox-viewport");
-    const panzoom = Panzoom(imageLightbox, {
-        minScale: 1,
-        maxScale: 4,
-        startScale: 1,
-        cursor: "default",
-        disablePan: true
-    });
 
-    // Évite le défilement de la page pendant le zoom et permet Panzoom sur mobile.
-    imageLightbox.style.touchAction = "none";
+    const echelleMinimum = 1;
+    const echelleMaximum = 4;
+    const facteurZoom = 1.15;
+
+    const panzoom = Panzoom(imageLightbox, {
+        minScale: echelleMinimum,
+        maxScale: echelleMaximum,
+        startScale: echelleMinimum,
+        disablePan: true,
+        cursor: "default"
+    });
 
     function mettreAJourDeplacement() {
 
-        const estZoome = panzoom.getScale() > 1.01;
+        const estZoome = panzoom.getScale() > echelleMinimum;
 
-        // L'image ne peut être déplacée qu'une fois zoomée.
         panzoom.setOptions({
             disablePan: !estZoome,
             cursor: estZoome ? "grab" : "default"
         });
+
+        imageLightbox.classList.toggle("est-zoome", estZoome);
 
     }
 
@@ -49,26 +54,45 @@ if (lightbox) {
 
     }
 
-    lightboxViewport.addEventListener("wheel", (event) => {
+    // Zoom centré : on n'utilise pas zoomWithWheel,
+    // qui effectue un zoom vers la position de la souris.
+    viewportLightbox.addEventListener("wheel", (event) => {
 
         event.preventDefault();
-        panzoom.zoomWithWheel(event);
+
+        if (event.deltaY === 0) {
+            return;
+        }
+
+        const echelleActuelle = panzoom.getScale();
+
+        const nouvelleEchelle = event.deltaY < 0
+            ? echelleActuelle * facteurZoom
+            : echelleActuelle / facteurZoom;
+
+        if (nouvelleEchelle <= echelleMinimum) {
+            reinitialiserZoom();
+            return;
+        }
+
+        panzoom.zoom(
+            Math.min(nouvelleEchelle, echelleMaximum),
+            { animate: false }
+        );
+
+        mettreAJourDeplacement();
 
     }, { passive: false });
 
-    imageLightbox.addEventListener("panzoomchange", mettreAJourDeplacement);
-
     imageLightbox.addEventListener("pointerdown", () => {
 
-        if (panzoom.getScale() > 1.01) {
+        if (panzoom.getScale() > echelleMinimum) {
             imageLightbox.style.cursor = "grabbing";
         }
 
     });
 
-    imageLightbox.addEventListener("pointerup", mettreAJourDeplacement);
-    imageLightbox.addEventListener("pointercancel", mettreAJourDeplacement);
-
+    document.addEventListener("pointerup", mettreAJourDeplacement);
 
     // ==========================
     // OUVRIR LA LIGHTBOX
