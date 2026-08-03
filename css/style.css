@@ -819,6 +819,17 @@ body {
     visibility: visible;
 }
 
+.lightbox-viewport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90vw;
+    height: 90vh;
+
+    overflow: hidden;
+}
+
 .lightbox img {
     max-width: 90%;
     max-height: 90%;
