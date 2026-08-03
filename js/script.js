@@ -18,7 +18,7 @@ if (lightbox) {
     // ==========================
     // ZOOM
     // ==========================
-
+    const lightboxViewport = document.querySelector(".lightbox-viewport");
     const panzoom = Panzoom(imageLightbox, {
         minScale: 1,
         maxScale: 4,
@@ -49,7 +49,7 @@ if (lightbox) {
 
     }
 
-    imageLightbox.parentElement.addEventListener("wheel", (event) => {
+    lightboxViewport.addEventListener("wheel", (event) => {
 
         event.preventDefault();
         panzoom.zoomWithWheel(event);
