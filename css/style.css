@@ -1686,3 +1686,27 @@ body {
 .univers {
     padding: 120px 8%;
 }
+
+.univers-contenu {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.univers-contenu h1 {
+    margin-bottom: 25px;
+
+    font-size: 3rem;
+    font-weight: 300;
+
+    color: #f2f5fb;
+    text-align: center;
+}
+
+.univers-contenu p {
+    margin-bottom: 22px;
+
+    color: #cfd6e3;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
