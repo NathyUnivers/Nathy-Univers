@@ -121,6 +121,17 @@ body {
     gap: 14px;
 }
 
+.menu-principal a {
+    color: #d9dee8;
+    text-decoration: none;
+
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+
+    transition: color 0.3s ease;
+}
+
 /* ==========================================
    EMBLÈME
 ========================================== */
