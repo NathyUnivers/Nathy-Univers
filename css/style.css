@@ -1757,15 +1757,9 @@ body {
 
 .evolution-grille {
     display: grid;
-    grid-template-columns:
-        1fr auto
-        1fr auto
-        1fr auto
-        1fr;
+    grid-template-columns: repeat(4, 1fr);
 
-    align-items: start;
-
-    gap: 18px;
+    gap: 30px;
 }
 
 .evolution-etape {
@@ -1789,38 +1783,6 @@ body {
 
     font-size: 0.95rem;
     line-height: 1.6;
-}
-
-.evolution-connecteur {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 120px;
-
-    min-width: 90px;
-}
-
-.evolution-connecteur .ligne {
-    width: 30px;
-    height: 1px;
-
-    background: rgba(150, 205, 255, 0.28);
-}
-
-.evolution-connecteur .losange {
-    width: 8px;
-    height: 8px;
-
-    margin: 0 10px;
-
-    background: #8ecbff;
-
-    transform: rotate(45deg);
-
-    box-shadow:
-        0 0 8px rgba(142, 203, 255, 0.45),
-        0 0 16px rgba(142, 203, 255, 0.20);
 }
 
 .processus-contenu {
