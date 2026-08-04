@@ -919,6 +919,15 @@ body {
     text-align: center;
 
     background:
+        /* Voile très discret qui accompagne le dernier tiers */
+        linear-gradient(
+            158deg,
+            transparent 0%,
+            transparent 57%,
+            rgba(69, 161, 207, 0.025) 69%,
+            rgba(133, 94, 193, 0.035) 77%,
+            transparent 91%
+        ),
         linear-gradient(
             180deg,
             #0a0d14 0%,
