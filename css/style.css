@@ -964,8 +964,11 @@ body {
 
     pointer-events: none;
     filter: blur(55px);
-
     opacity: 0.42;
+
+    /* Évite les petits soubresauts de rendu pendant l'animation */
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 /* Voile bleu argenté, présent dans la moitié haute. */
