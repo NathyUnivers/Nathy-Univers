@@ -1715,6 +1715,57 @@ body {
     padding: 40px 8% 80px;
 }
 
+.galerie-evolution {
+    padding: 40px 8% 120px;
+}
+
+.galerie-contenu {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.galerie-contenu h2 {
+    margin-bottom: 60px;
+
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    color: #f2f5fb;
+    text-align: center;
+}
+
+/* Emplacement des futures créations */
+
+.evolution-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.evolution-etape {
+    text-align: center;
+}
+
+.evolution-image {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(180, 210, 255, 0.08);
+}
+
+.evolution-legende {
+    margin-top: 18px;
+
+    color: #cfd6e3;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .processus-contenu {
     max-width: 900px;
     margin: 0 auto;
