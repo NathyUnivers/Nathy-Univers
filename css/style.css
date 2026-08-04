@@ -919,26 +919,7 @@ body {
     text-align: center;
 
    background:
-    /* Voile bleu-violet très diffus dans le dernier tiers */
-    linear-gradient(
-        108deg,
-        transparent 8%,
-        rgba(62, 165, 210, 0.015) 30%,
-        rgba(118, 99, 193, 0.045) 49%,
-        rgba(181, 210, 236, 0.035) 63%,
-        transparent 88%
-    ) center bottom / 190% 44% no-repeat,
-
-    /* Reflet argenté, légèrement décalé pour éviter un aspect symétrique */
-    linear-gradient(
-        76deg,
-        transparent 14%,
-        rgba(166, 207, 229, 0.02) 37%,
-        rgba(91, 172, 210, 0.035) 54%,
-        rgba(143, 104, 204, 0.02) 69%,
-        transparent 90%
-    ) 42% 92% / 180% 34% no-repeat,
-
+  
     /* Fond sombre existant */
     linear-gradient(
         180deg,
