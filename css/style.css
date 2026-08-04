@@ -1790,18 +1790,26 @@ body {
 }
 
 .evolution-image {
+    display: block;
+
     width: 100%;
     aspect-ratio: 4 / 5;
+
+    object-fit: cover;
 
     border-radius: 18px;
 
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(180, 210, 255, 0.08);
-
-    .evolution-image {
-    display: block;
-    object-fit: cover;
 }
+
+.evolution-etape h3 {
+    margin: 22px 0 14px;
+
+    color: #e8eef8;
+
+    font-size: 1.15rem;
+    font-weight: 600;
 }
 
 .evolution-legende {
@@ -1835,4 +1843,10 @@ body {
 
     font-size: 1.15rem;
     line-height: 1.9;
+}
+
+.conclusion-galerie {
+    margin-top: 90px;
+
+    text-align: center;
 }
