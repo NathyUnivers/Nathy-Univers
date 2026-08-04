@@ -980,7 +980,7 @@ body {
         transparent 88%
     );
 
-    animation: voile-bleu 42s ease-in-out infinite;
+    animation: none;
 }
 
 /* Voile violet discret, prolongé dans la moitié basse. */
@@ -999,7 +999,7 @@ body {
         transparent 90%
     );
 
-    animation: voile-violet 48s ease-in-out infinite;
+    animation: none;
 }
 
 @keyframes voile-bleu {
