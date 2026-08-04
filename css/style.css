@@ -107,6 +107,15 @@ body {
     transform:translateY(-2px);
 }
 
+.menu-principal {
+    position: absolute;
+
+    top: 35px;
+    right: 50px;
+
+    z-index: 20;
+}
+
 /* ==========================================
    EMBLÈME
 ========================================== */
