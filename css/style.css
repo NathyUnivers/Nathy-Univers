@@ -1010,12 +1010,13 @@ body {
 }
 
 @keyframes voile-bleu {
-    from {
-        transform: rotate(-7deg) skewX(-10deg) translate3d(-3%, 0, 0);
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(-7deg) skewX(-10deg);
     }
 
-    to {
-        transform: rotate(-5deg) skewX(-10deg) translate3d(5%, 3%, 0);
+    50% {
+        transform: translate3d(26px, 10px, 0) rotate(-7deg) skewX(-10deg);
     }
 }
 
