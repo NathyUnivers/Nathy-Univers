@@ -1710,3 +1710,31 @@ body {
     font-size: 1.05rem;
     line-height: 1.9;
 }
+
+.processus-creation {
+    padding: 40px 8% 80px;
+}
+
+.processus-contenu {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.processus-contenu h2 {
+    margin-bottom: 25px;
+
+    font-size: 2.2rem;
+    font-weight: 300;
+
+    color: #f2f5fb;
+    text-align: center;
+}
+
+.processus-contenu p {
+    margin-bottom: 22px;
+
+    color: #cfd6e3;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
