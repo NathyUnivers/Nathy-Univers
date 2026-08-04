@@ -1010,13 +1010,38 @@ body {
 }
 
 @keyframes voile-bleu {
-    0%,
-    100% {
+    0% {
         transform: translate3d(0, 0, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
     }
 
-    50% {
-        transform: translate3d(26px, 10px, 0) rotate(-7deg) skewX(-10deg);
+    14% {
+        transform: translate3d(10px, 3px, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
+    }
+
+    37% {
+        transform: translate3d(24px, 9px, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
+    }
+
+    58% {
+        transform: translate3d(17px, 15px, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
+    }
+
+    79% {
+        transform: translate3d(-5px, 8px, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
+    }
+
+    92% {
+        transform: translate3d(-4px, -1px, 0) rotate(-7deg) skewX(-10deg);
+        animation-timing-function: linear;
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(-7deg) skewX(-10deg);
     }
 }
 
