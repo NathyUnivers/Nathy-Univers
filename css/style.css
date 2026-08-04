@@ -122,6 +122,7 @@ body {
 }
 
 .menu-principal a {
+    position: relative;
     color: #d9dee8;
     text-decoration: none;
 
