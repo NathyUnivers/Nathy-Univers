@@ -1759,7 +1759,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 30px;
+    gap: 42px;
 }
 
 .evolution-etape {
@@ -1768,22 +1768,25 @@ body {
 }
 
 .evolution-etape:not(:last-child)::after {
-    content: "◆";
+    content: "";
 
     position: absolute;
 
-    top: 42%;
-    right: -18px;
+    top: 40%;
+    right: -22px;
 
-    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
 
-    color: #8ecbff;
+    background: #8ecbff;
 
-    font-size: 0.85rem;
+    transform: translateY(-50%) rotate(45deg);
 
-    text-shadow:
-        0 0 6px rgba(142,203,255,0.45),
-        0 0 12px rgba(142,203,255,0.20);
+    border-radius: 1px;
+
+    box-shadow:
+        0 0 8px rgba(142, 203, 255, 0.45),
+        0 0 16px rgba(142, 203, 255, 0.20);
 }
 
 .evolution-image {
