@@ -1678,3 +1678,11 @@ body {
     object-fit:contain;
     flex-shrink:0;
 }
+
+/* ==========================================
+   PAGE MON UNIVERS
+========================================== */
+
+.univers {
+    padding: 120px 8%;
+}
