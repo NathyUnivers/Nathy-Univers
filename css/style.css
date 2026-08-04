@@ -146,11 +146,11 @@ body {
 
     transform: translateY(-50%) rotate(45deg);
 
-    background: linear-gradient(
-        135deg,
-        #dff8ff,
-        #7ec8ff
-    );
+  background: linear-gradient(
+    135deg,
+    #eaf8ff,
+    #58bfff
+);
 
     border-radius: 1px;
 
