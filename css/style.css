@@ -1846,7 +1846,14 @@ body {
 }
 
 .conclusion-galerie {
-    margin-top: 90px;
+    max-width: 900px;
+
+    margin: 90px auto 0;
+
+    color: #cfd6e3;
+
+    font-size: 1.15rem;
+    line-height: 1.9;
 
     text-align: center;
 }
