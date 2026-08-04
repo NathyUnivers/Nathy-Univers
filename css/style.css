@@ -1046,21 +1046,39 @@ body {
 }
 
 @keyframes voile-violet {
-    0%,
+    0% {
+        transform: translate3d(0, 0, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
+    17% {
+        transform: translate3d(-7px, -4px, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
+    34% {
+        transform: translate3d(-20px, -9px, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
+    56% {
+        transform: translate3d(-16px, -15px, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
+    74% {
+        transform: translate3d(-3px, -12px, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
+    91% {
+        transform: translate3d(5px, -3px, 0) rotate(8deg) skewX(12deg);
+        animation-timing-function: linear;
+    }
+
     100% {
         transform: translate3d(0, 0, 0) rotate(8deg) skewX(12deg);
     }
-
-    50% {
-        transform: translate3d(-22px, -9px, 0) rotate(8deg) skewX(12deg);
-    }
-}
-
-/* Le contenu et les cartes restent toujours au premier plan. */
-.explorer-contenu,
-.cartes-explorer {
-    position: relative;
-    z-index: 2;
 }
 
 /* ==========================================================
