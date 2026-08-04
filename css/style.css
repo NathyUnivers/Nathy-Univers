@@ -991,6 +991,7 @@ body {
 }
 
 /* Voile violet discret, prolongé dans la moitié basse. */
+
 .explorer::after {
     right: -48%;
     bottom: 1%;
@@ -1005,8 +1006,7 @@ body {
         transparent 90%
     );
 
-    transform: rotate(8deg) skewX(12deg);
-    animation: voile-violet 30s ease-in-out infinite alternate;
+    animation: voile-violet 48s ease-in-out infinite;
 }
 
 @keyframes voile-bleu {
