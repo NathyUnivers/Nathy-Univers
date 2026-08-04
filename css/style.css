@@ -1759,7 +1759,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 42px;
+    gap: 50px;
 }
 
 .evolution-etape {
