@@ -972,6 +972,7 @@ body {
 }
 
 /* Voile bleu argenté, présent dans la moitié haute. */
+
 .explorer::before {
     top: 3%;
     left: -42%;
@@ -986,8 +987,7 @@ body {
         transparent 88%
     );
 
-    transform: rotate(-7deg) skewX(-10deg);
-    animation: voile-bleu 24s ease-in-out infinite alternate;
+    animation: voile-bleu 42s ease-in-out infinite;
 }
 
 /* Voile violet discret, prolongé dans la moitié basse. */
