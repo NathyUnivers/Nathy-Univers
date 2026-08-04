@@ -963,7 +963,7 @@ body {
     height: 42%;
 
     pointer-events: none;
-    filter: blur(55px);
+    filter: blur(90px);
     opacity: 0.42;
 
     /* Évite les petits soubresauts de rendu pendant l'animation */
