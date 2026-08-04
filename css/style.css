@@ -133,6 +133,28 @@ body {
     transition: color 0.3s ease;
 }
 
+.menu-principal a::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+    top: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    transform: translateY(-50%) rotate(45deg);
+
+    background: linear-gradient(
+        135deg,
+        #dff8ff,
+        #7ec8ff
+    );
+
+    border-radius: 1px;
+}
+
 .menu-principal a:hover {
     color: #f4f7ff;
 }
