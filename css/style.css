@@ -1763,7 +1763,27 @@ body {
 }
 
 .evolution-etape {
+    position: relative;
     text-align: center;
+}
+
+.evolution-etape:not(:last-child)::after {
+    content: "◆";
+
+    position: absolute;
+
+    top: 42%;
+    right: -18px;
+
+    transform: translateY(-50%);
+
+    color: #8ecbff;
+
+    font-size: 0.85rem;
+
+    text-shadow:
+        0 0 6px rgba(142,203,255,0.45),
+        0 0 12px rgba(142,203,255,0.20);
 }
 
 .evolution-image {
