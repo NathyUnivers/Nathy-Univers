@@ -1684,7 +1684,7 @@ body {
 ========================================== */
 
 .univers {
-    padding: 120px 8%;
+    padding: 90px 8% 120px;
 }
 
 .univers-contenu {
@@ -1731,6 +1731,25 @@ body {
     font-weight: 300;
 
     color: #f2f5fb;
+    text-align: center;
+}
+
+.galerie-contenu > p {
+    max-width: 900px;
+
+    margin: 0 auto 50px;
+
+    color: #cfd6e3;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    text-align: left;
+}
+
+.galerie-contenu > p:last-of-type {
+    margin-top: 70px;
+
     text-align: center;
 }
 
