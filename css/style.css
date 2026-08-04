@@ -1093,6 +1093,61 @@ body {
     }
 }
 
+.voiles-prolonges {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.voile-prolonge {
+    position: absolute;
+
+    width: 170%;
+    height: 42%;
+
+    filter: blur(55px);
+    opacity: 0.42;
+}
+
+/* Reprise du voile bleu / argenté existant */
+.voile-prolonge-bleu {
+    top: 48%;
+    left: -42%;
+
+    background: linear-gradient(
+        108deg,
+        transparent 8%,
+        rgba(56, 179, 224, 0.03) 25%,
+        rgba(109, 202, 255, 0.14) 43%,
+        rgba(192, 221, 255, 0.09) 57%,
+        rgba(111, 85, 205, 0.07) 70%,
+        transparent 88%
+    );
+
+    transform: rotate(-7deg) skewX(-10deg);
+}
+
+/* Reprise du voile violet discret existant */
+.voile-prolonge-violet {
+    top: 64%;
+    right: -48%;
+
+    background: linear-gradient(
+        72deg,
+        transparent 10%,
+        rgba(80, 181, 218, 0.04) 28%,
+        rgba(124, 92, 205, 0.11) 46%,
+        rgba(175, 129, 255, 0.08) 59%,
+        rgba(188, 210, 235, 0.05) 73%,
+        transparent 90%
+    );
+
+    transform: rotate(8deg) skewX(12deg);
+}
+
 /* ==========================================================
    RESPONSIVE - CARTES EXPLORER
 ========================================================== */
