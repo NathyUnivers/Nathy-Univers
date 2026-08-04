@@ -1797,6 +1797,11 @@ body {
 
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(180, 210, 255, 0.08);
+
+    .evolution-image {
+    display: block;
+    object-fit: cover;
+}
 }
 
 .evolution-legende {
