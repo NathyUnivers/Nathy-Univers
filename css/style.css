@@ -1858,3 +1858,11 @@ body {
 
     text-align: center;
 }
+
+@media (max-width: 1250px) {
+
+    .evolution-etape:not(:last-child)::after {
+        right: -18px;
+    }
+
+}
