@@ -1846,8 +1846,9 @@ body {
 }
 
 .conclusion-galerie {
+    display: block;
+    width: 100%;
     max-width: 900px;
-
     margin: 90px auto 0;
 
     color: #cfd6e3;
