@@ -1862,7 +1862,7 @@ body {
 @media (max-width: 1250px) {
 
     .evolution-etape:not(:last-child)::after {
-        top: 8%;
+        top: 7%;
         right: -34px;
     }
 
