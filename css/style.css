@@ -1862,8 +1862,8 @@ body {
 @media (max-width: 1250px) {
 
     .evolution-etape:not(:last-child)::after {
-        top: 50%;
-        right: -24px;
+        top: 15%;
+        right: -30px;
     }
 
 }
