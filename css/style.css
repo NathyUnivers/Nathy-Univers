@@ -250,6 +250,10 @@ body {
         margin:auto;
     }
 
+    .menu-principal{
+    right: 35px;
+}
+
    .hero-image{
     width:100%;
     max-width:620px;
